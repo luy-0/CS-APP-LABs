@@ -18,3 +18,7 @@ Lab-Notes 文件夹包括各实验完成中的总结经验
 ### Lab1: DataLab
 
 6.14-6.21
+
+### Lab2: BombLab
+
+6.19-6.26
