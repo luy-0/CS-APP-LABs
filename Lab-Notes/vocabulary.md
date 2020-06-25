@@ -113,3 +113,47 @@ little endian order&big endian order [参考1][https://blog.csdn.net/waitingbb12
 `counter example` 反例
 
 > One general way to find counter examples is to try team in.
+
+## L4,FLOATING POINT
+
+### Terminology
+
+`fractional binary number`: 二进制小数
+
+`rational number`: 有理数
+
+`sign bit`: 符号位
+
+`significand M & mantissa`：尾数M
+
+`exponent`: 阶码
+
+ `exp bits` ：（可以意译为）阶码位，阶码部分
+
+`frac bits`：（可以意译为）尾数位，尾数部分
+
+`normalized`: 规格化的 
+
+`positive infinity`: 正无穷
+
+`negative infinity`: 负无穷
+
+`NaN`: not a number
+
+`monotonicity`: 单调性
+
+### Normal
+
+`trade-off`: 权衡，妥协
+
+`funky`: 时髦的
+
+> There is funky intel extended precision. 还有一种新颖的英特尔扩展精度
+
+`spirit`: 精髓
+
+> If you get the spirit, you get  this nice smooth transition from denorm to normalize.
+
+`mechanical `: 机械的，固定的
+
+`propagate`: 相加
