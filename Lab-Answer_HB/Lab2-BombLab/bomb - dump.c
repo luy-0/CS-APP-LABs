@@ -258,3 +258,98 @@ read_six_numbers(){
      */
 
 }
+
+/* 输入2个数字,与8组数据比较,不同炸 */
+phase_3(){
+    /* 
+    rdi = &input
+    Dump of assembler code for function phase_3:
+   0x0000000000400f43 <+0>:	    sub    $0x18,%rsp               //栈扩18
+   0x0000000000400f47 <+4>:	    lea    0xc(%rsp),%rcx           //rcx = &(栈12)
+   0x0000000000400f4c <+9>:	    lea    0x8(%rsp),%rdx           //rdx = &(栈8)
+   0x0000000000400f51 <+14>:	mov    $0x4025cf,%esi           //si = $0x4025cf
+   0x0000000000400f56 <+19>:	mov    $0x0,%eax                //ax = $0x0
+   0x0000000000400f5b <+24>:	callq  0x400bf0 <__isoc99_sscanf@plt>   // 见注解p3_1,将2个数字装入栈8 和 栈12处
+   0x0000000000400f60 <+29>:	cmp    $0x1,%eax                //ax与1比较 
+   0x0000000000400f63 <+32>:	jg     0x400f6a <phase_3+39>    //ax>1 跳转39 否则炸
+   0x0000000000400f65 <+34>:	callq  0x40143a <explode_bomb>
+   0x0000000000400f6a <+39>:	cmpl   $0x7,0x8(%rsp)           //*(栈8)与7比较 (也就是数字1与7比较)
+   0x0000000000400f6f <+44>:	ja     0x400fad <phase_3+106>   //*(栈8)>7(无符号) 转106,炸
+   0x0000000000400f71 <+46>:	mov    0x8(%rsp),%eax           //ax = *(栈8) 数1
+   0x0000000000400f75 <+50>:	jmpq   *0x402470(,%rax,8)       //跳转到(ax*8+0x402470) 见注解p3_2
+   0x0000000000400f7c <+57>:	mov    $0xcf,%eax               //上接50 且ax=0 key = 0xcf = 207
+   0x0000000000400f81 <+62>:	jmp    0x400fbe <phase_3+123>
+   0x0000000000400f83 <+64>:	mov    $0x2c3,%eax              //上接50 且ax=2 key = 0x2c3 = 707
+   0x0000000000400f88 <+69>:	jmp    0x400fbe <phase_3+123>
+   0x0000000000400f8a <+71>:	mov    $0x100,%eax              //上接50 且ax=3 key = 0x100 = 256
+   0x0000000000400f8f <+76>:	jmp    0x400fbe <phase_3+123>
+   0x0000000000400f91 <+78>:	mov    $0x185,%eax              //上接50 且ax=4 key = 0x185 = 389
+   0x0000000000400f96 <+83>:	jmp    0x400fbe <phase_3+123>
+   0x0000000000400f98 <+85>:	mov    $0xce,%eax               //上接50 且ax=5 key = 0xce  = 206
+   0x0000000000400f9d <+90>:	jmp    0x400fbe <phase_3+123>
+   0x0000000000400f9f <+92>:	mov    $0x2aa,%eax              //上接50 且ax=6 key = 0x2aa = 682
+   0x0000000000400fa4 <+97>:	jmp    0x400fbe <phase_3+123>
+   0x0000000000400fa6 <+99>:	mov    $0x147,%eax              //上接50 且ax=7 key = 0x147 = 327
+   0x0000000000400fab <+104>:	jmp    0x400fbe <phase_3+123>
+   0x0000000000400fad <+106>:	callq  0x40143a <explode_bomb>  //上接44,输入个数<2
+   0x0000000000400fb2 <+111>:	mov    $0x0,%eax                //这里是什么情况?
+   0x0000000000400fb7 <+116>:	jmp    0x400fbe <phase_3+123>
+   0x0000000000400fb9 <+118>:	mov    $0x137,%eax              //上接50 且ax=1 key = 0x137 = 311
+   0x0000000000400fbe <+123>:	cmp    0xc(%rsp),%eax           //比较ax(即key)与数2
+   0x0000000000400fc2 <+127>:	je     0x400fc9 <phase_3+134>   //不等炸
+   0x0000000000400fc4 <+129>:	callq  0x40143a <explode_bomb>
+   0x0000000000400fc9 <+134>:	add    $0x18,%rsp
+   0x0000000000400fcd <+138>:	retq   
+ */
+
+
+
+}
+
+/* 注解p3_2  每个(ax*8+0x402470)中储存的地址
+    (gdb) print *(int**)  (0x402470+8*0)
+    $11 = (int *) 0x400f7c <phase_3+57>
+    (gdb) print *(int**)  (0x402470+8*1)
+    $12 = (int *) 0x400fb9 <phase_3+118>
+    (gdb) print *(int**)  (0x402470+8*2)
+    $13 = (int *) 0x400f83 <phase_3+64>
+    (gdb) print *(int**)  (0x402470+8*3)
+    $14 = (int *) 0x400f8a <phase_3+71>
+    (gdb) print *(int**)  (0x402470+8*4)
+    $15 = (int *) 0x400f91 <phase_3+78>
+    (gdb) print *(int**)  (0x402470+8*5)
+    $16 = (int *) 0x400f98 <phase_3+85>
+    (gdb) print *(int**)  (0x402470+8*6)
+    $17 = (int *) 0x400f9f <phase_3+92>
+    (gdb) print *(int**)  (0x402470+8*7)
+    $18 = (int *) 0x400fa6 <phase_3+99>
+ */
+
+/* 注解p3_1 __isoc99_sscanf()
+    c99标准库sscanf函数, (参考链接)[http://www.cplusplus.com/reference/cstdio/sscanf/]
+
+    int sscanf ( const char * s, const char * format, ...);
+    Read formatted data from string
+    Reads data from s and stores them according to parameter format into the locations given by the additional arguments, as if scanf was used, but reading from s instead of the standard input (stdin).
+
+    The additional arguments should point to already allocated objects of the type specified by their corresponding format specifier within the format string.
+
+    Return Value
+    On success, the function returns the number of items in the argument list successfully filled. This count can match the expected number of items or be less (even zero) in the case of a matching failure.
+    In the case of an input failure before any data could be successfully interpreted, EOF is returned. 
+    返回读取到的item的个数
+
+
+*/
+
+
+
+
+
+
+
+
+}
+
+
+
