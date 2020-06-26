@@ -26,3 +26,15 @@ Lab-Notes 文件夹包括各实验完成中的总结经验
 ### Lab3: AttackLab
 
 6.26-7.3
+
+*注: Architecture Lab(对应教材3e第四章) 略去不做*
+
+### Lab4:PerformanceLab
+
+
+
+### Lab5:CacheLab
+
+
+
+### Lab6:MallocLab
