@@ -190,8 +190,15 @@ int isTmax(int x) {
  *   Rating: 2
  */
 int allOsddBits(int x) {
-  //TODO: allOsddBits
-  return 2;
+  int cmp_value = 0x5;
+  cmp_value += cmp_value<<4;
+  cmp_value += cmp_value<<8;
+  cmp_value += cmp_value<<16;
+
+  int cmp_result = cmp_value | x;
+  int re = !(cmp_result+1);
+
+  return re;
 }
 /* 
  * negate - return -x 
@@ -299,7 +306,17 @@ int howManyBits(int x) {
  *   Rating: 4
  */
 unsigned floatScale2(unsigned uf) {
-  return 2;
+  //简单的想法:将exp部分+1
+  //问题: 非规格数? 0.25*2=0.5? inf? 
+  unsigned Pure_1_except_last = -2;     //11111111...110
+  unsigned Pure_1_except_first = -1 ;
+  Pure_1_except_first /= 2;             //0111111...1111
+  unsigned Exp_all_1 = (Pure_1_except_last << 22) & Pure_1_except_first; 
+    //‭0111 1111 1000 0000 0000 0000 0000 0000‬
+    //TODO: floatScale2 然后呢
+  unsigned addExp = 1<<23;
+  unsigned re = uf + addExp;
+  return re;
 }
 /* 
  * floatFloat2Int - Return bit-level equivalent of expression (int) f
