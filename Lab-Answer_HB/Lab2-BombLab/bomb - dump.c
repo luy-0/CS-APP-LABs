@@ -306,6 +306,23 @@ phase_3(){
 
 }
 
+/* 注解p3_1 __isoc99_sscanf()
+    c99标准库sscanf函数, (参考链接)[http://www.cplusplus.com/reference/cstdio/sscanf/]
+
+    int sscanf ( const char * s, const char * format, ...);
+    Read formatted data from string
+    Reads data from s and stores them according to parameter format into the locations given by the additional arguments, as if scanf was used, but reading from s instead of the standard input (stdin).
+
+    The additional arguments should point to already allocated objects of the type specified by their corresponding format specifier within the format string.
+
+    Return Value
+    On success, the function returns the number of items in the argument list successfully filled. This count can match the expected number of items or be less (even zero) in the case of a matching failure.
+    In the case of an input failure before any data could be successfully interpreted, EOF is returned. 
+    返回读取到的item的个数
+
+
+*/
+
 /* 注解p3_2  每个(ax*8+0x402470)中储存的地址
     (gdb) print *(int**)  (0x402470+8*0)
     $11 = (int *) 0x400f7c <phase_3+57>
@@ -325,31 +342,174 @@ phase_3(){
     $18 = (int *) 0x400fa6 <phase_3+99>
  */
 
-/* 注解p3_1 __isoc99_sscanf()
-    c99标准库sscanf函数, (参考链接)[http://www.cplusplus.com/reference/cstdio/sscanf/]
+/* 两个数字比较 数1{0 1 3 7},数2=0 否则炸 */
+phase_4(){
+    /* 
+%rdi &input
+Dump of assembler code for function phase_4:
+   0x000000000040100c <+0>:	    sub    $0x18,%rsp               //扩栈18
+   0x0000000000401010 <+4>:	    lea    0xc(%rsp),%rcx           //cx 栈12   数2
+   0x0000000000401015 <+9>:	    lea    0x8(%rsp),%rdx           //dx 栈8    数1
+   0x000000000040101a <+14>:	mov    $0x4025cf,%esi           //si = 0x4025cf
+   0x000000000040101f <+19>:	mov    $0x0,%eax                //ax = 0
+   0x0000000000401024 <+24>:	callq  0x400bf0 <__isoc99_sscanf@plt>   //读取
+   0x0000000000401029 <+29>:	cmp    $0x2,%eax                //读入2个数字
+   0x000000000040102c <+32>:	jne    0x401035 <phase_4+41>    //不为2个,炸
+   0x000000000040102e <+34>:	cmpl   $0xe,0x8(%rsp)           //数1 与 14比较
+   0x0000000000401033 <+39>:	jbe    0x40103a <phase_4+46>    //数1 <=14 转46
+   0x0000000000401035 <+41>:	callq  0x40143a <explode_bomb>  //数1 >14 炸
+   0x000000000040103a <+46>:	mov    $0xe,%edx                //14赋给dx
+   0x000000000040103f <+51>:	mov    $0x0,%esi                //si = 0
+   0x0000000000401044 <+56>:	mov    0x8(%rsp),%edi           //di 栈8    数1
+   0x0000000000401048 <+60>:	callq  0x400fce <func4>         
+   0x000000000040104d <+65>:	test   %eax,%eax                //对于返回值ax
+   0x000000000040104f <+67>:	jne    0x401058 <phase_4+76>    //ax!=0 转76 炸
+   0x0000000000401051 <+69>:	cmpl   $0x0,0xc(%rsp)           //栈12 == 0? 数2
+   0x0000000000401056 <+74>:	je     0x40105d <phase_4+81>    //不等炸,等拆
+   0x0000000000401058 <+76>:	callq  0x40143a <explode_bomb>
+   0x000000000040105d <+81>:	add    $0x18,%rsp
+   0x0000000000401061 <+85>:	retq  
+    
+    
+     */
 
-    int sscanf ( const char * s, const char * format, ...);
-    Read formatted data from string
-    Reads data from s and stores them according to parameter format into the locations given by the additional arguments, as if scanf was used, but reading from s instead of the standard input (stdin).
+}
 
-    The additional arguments should point to already allocated objects of the type specified by their corresponding format specifier within the format string.
+/* 对参数操作,返回int */
+func4(){
+    /* 
+第一轮: rdi = 数1 rsi = 0   rdx = 0xe 
+Dump of assembler code for function func4:
+   0x0000000000400fce <+0>:	    sub    $0x8,%rsp            //栈扩8
+   0x0000000000400fd2 <+4>:	    mov    %edx,%eax            //ax = dx
+   0x0000000000400fd4 <+6>:	    sub    %esi,%eax            //ax = dx-si
+   0x0000000000400fd6 <+8>:	    mov    %eax,%ecx            //cx = dx-si
+   0x0000000000400fd8 <+10>:	shr    $0x1f,%ecx           //逻辑右移 cx 31位 正0负1
+   0x0000000000400fdb <+13>:	add    %ecx,%eax            //ax += cx
+   0x0000000000400fdd <+15>:	sar    %eax                 //ax 算数右移1位
+   0x0000000000400fdf <+17>:	lea    (%rax,%rsi,1),%ecx   //cx = si + ax
+   0x0000000000400fe2 <+20>:	cmp    %edi,%ecx            //cx与数1比较 
+   0x0000000000400fe4 <+22>:	jle    0x400ff2 <func4+36>  //cx<=数1, 转36
+   0x0000000000400fe6 <+24>:	lea    -0x1(%rcx),%edx      //cx>数1 dx = cx-1
+   0x0000000000400fe9 <+27>:	callq  0x400fce <func4>     //调用func4 di=数1,si=si,dx=cx-1
+   0x0000000000400fee <+32>:	add    %eax,%eax            //返回值ax*=2
+   0x0000000000400ff0 <+34>:	jmp    0x401007 <func4+57>  //返回
+   0x0000000000400ff2 <+36>:	mov    $0x0,%eax            //上接22 ax = 0
+   0x0000000000400ff7 <+41>:	cmp    %edi,%ecx            //比较cx 数1
+   0x0000000000400ff9 <+43>:	jge    0x401007 <func4+57>  //cx>=数1(也就是cx=数1) 转57 返回 
+   0x0000000000400ffb <+45>:	lea    0x1(%rcx),%esi       //cx<数1 si = cx+1
+   0x0000000000400ffe <+48>:	callq  0x400fce <func4>     //调用func4 di=数1,si=si=cx+1,dx=dx
+   0x0000000000401003 <+53>:	lea    0x1(%rax,%rax,1),%eax    //ax=2ax+1
+   0x0000000000401007 <+57>:	add    $0x8,%rsp            
+   0x000000000040100b <+61>:	retq   
+    */
+}
 
-    Return Value
-    On success, the function returns the number of items in the argument list successfully filled. This count can match the expected number of items or be less (even zero) in the case of a matching failure.
-    In the case of an input failure before any data could be successfully interpreted, EOF is returned. 
-    返回读取到的item的个数
-
-
-*/
-
-
-
-
-
-
+phase_5(){
+    /* 
+%rdi &input
+Dump of assembler code for function phase_5:
+    0x0000000000401062 <+0>:	push   %rbx
+    0x0000000000401063 <+1>:	sub    $0x20,%rsp
+    0x0000000000401067 <+5>:	mov    %rdi,%rbx            //rbx = &input
+    0x000000000040106a <+8>:	mov    %fs:0x28,%rax        //rax = &fs+28      详见注解p5_1
+    0x0000000000401073 <+17>:	mov    %rax,0x18(%rsp)      //栈18储存&fs+28
+    0x0000000000401078 <+22>:	xor    %eax,%eax            //自我异或, 等价于ax置0
+    0x000000000040107a <+24>:	callq  0x40131b <string_length> //检测rdi的长度
+    0x000000000040107f <+29>:	cmp    $0x6,%eax            
+    0x0000000000401082 <+32>:	je     0x4010d2 <phase_5+112>   //长度=6 转112
+    0x0000000000401084 <+34>:	callq  0x40143a <explode_bomb>  //长度!=6,炸
+    0x0000000000401089 <+39>:	jmp    0x4010d2 <phase_5+112>
+    0x000000000040108b <+41>:	movzbl (%rbx,%rax,1),%ecx       //cx = (ax+bx) = input[ax]
+    0x000000000040108f <+45>:	mov    %cl,(%rsp)               //栈0 = cl
+    0x0000000000401092 <+48>:	mov    (%rsp),%rdx              //dx = 栈0
+    0x0000000000401096 <+52>:	and    $0xf,%edx                //dx^f 取后4位
+    0x0000000000401099 <+55>:	movzbl 0x4024b0(%rdx),%edx      //dx = (0x4024b0+dx) 这里比较复杂,详见注解p5_2,p5_3
+    0x00000000004010a0 <+62>:	mov    %dl,0x10(%rsp,%rax,1)    //栈10+ax = dl 
+    0x00000000004010a4 <+66>:	add    $0x1,%rax                //ax+=1
+    0x00000000004010a8 <+70>:	cmp    $0x6,%rax                //ax与6比较
+    0x00000000004010ac <+74>:	jne    0x40108b <phase_5+41>    //不为6 继续循环至41
+    //对输入的每个字符依次运算,根据运算结果取出特定内存中的字符,依次存储在栈10~栈16处
+    0x00000000004010ae <+76>:	movb   $0x0,0x16(%rsp)          //栈16=0
+    0x00000000004010b3 <+81>:	mov    $0x40245e,%esi           //si=0x40245e
+    0x00000000004010b8 <+86>:	lea    0x10(%rsp),%rdi          //di=栈10
+    0x00000000004010bd <+91>:	callq  0x401338 <strings_not_equal> //栈10与0x40245e比较
+    0x00000000004010c2 <+96>:	test   %eax,%eax                    //对于ax (strings_not_equal的返回值)
+    0x00000000004010c4 <+98>:	je     0x4010d9 <phase_5+119>       //返回值1(不同) 炸 相同转119
+    0x00000000004010c6 <+100>:	callq  0x40143a <explode_bomb>
+    0x00000000004010cb <+105>:	nopl   0x0(%rax,%rax,1)
+    0x00000000004010d0 <+110>:	jmp    0x4010d9 <phase_5+119>
+    0x00000000004010d2 <+112>:	mov    $0x0,%eax                    //ax置0
+    0x00000000004010d7 <+117>:	jmp    0x40108b <phase_5+41>        //转41
+    0x00000000004010d9 <+119>:	mov    0x18(%rsp),%rax              //ax=栈18
+    0x00000000004010de <+124>:	xor    %fs:0x28,%rax                //栈18 与fs+28异或
+    0x00000000004010e7 <+133>:	je     0x4010ee <phase_5+140>       //相同 转140 解决
+    0x00000000004010e9 <+135>:	callq  0x400b30 <__stack_chk_fail@plt>
+    0x00000000004010ee <+140>:	add    $0x20,%rsp
+    0x00000000004010f2 <+144>:	pop    %rbx
+    0x00000000004010f3 <+145>:	retq   
+    
+     */
 
 
 }
+
+
+
+/* 注解p5_1 fs段寄存器
+    8086CPU将内存分段，并设计了 4 个段寄存器，CS，DS，ES 和 SS，分别用于指令、数据、其它和堆栈。
+    FS、GS 是从 80386 开始增加的两个辅助段寄存器，没有全称，取名就是按字母序排在 CS、DS、ES 之后的。 
+    */
+
+/* 注解p5_3 0x4024b0附近存储的字符
+    (gdb) print (char) *(0x4024b0+0x0)
+    $1 = 109 'm'
+
+    (gdb) print (char) *(0x4024b0+0x1)
+    $2 = 97 'a'
+    
+    (gdb) print (char) *(0x4024b0+0x2)
+    $3 = 100 'd'
+    
+    (gdb) print (char) *(0x4024b0+0x3)
+    $4 = 117 'u'
+    
+    (gdb) print (char) *(0x4024b0+0x4)
+    $5 = 105 'i'
+    
+    (gdb) print (char) *(0x4024b0+0x5)
+    $6 = 101 'e'
+    
+    (gdb) print (char) *(0x4024b0+0x6)
+    $7 = 114 'r'
+    
+    (gdb) print (char) *(0x4024b0+0x7)
+    $8 = 115 's'
+    
+    (gdb) print (char) *(0x4024b0+0x8)
+    $9 = 110 'n'
+    
+    (gdb) print (char) *(0x4024b0+0x9)
+    $10 = 102 'f'
+    
+    (gdb) print (char) *(0x4024b0+0xa)
+    $11 = 111 'o'
+    
+    (gdb) print (char) *(0x4024b0+0xb)
+    $12 = 116 't'
+    
+    (gdb) print (char) *(0x4024b0+0xc)
+    $13 = 118 'v'
+    
+    (gdb) print (char) *(0x4024b0+0xd)
+    $14 = 98 'b'
+    
+    (gdb) print (char) *(0x4024b0+0xe)
+    $15 = 121 'y'
+    
+    (gdb) print (char) *(0x4024b0+0xf)
+    $16 = 108 'l'
+ */
 
 
 
