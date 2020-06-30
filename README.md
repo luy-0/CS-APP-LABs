@@ -31,7 +31,9 @@ Lab-Notes 文件夹包括各实验完成中的总结经验
 
 ### Lab4:PerformanceLab
 
+6.30-?
 
+*注: 不限时操作*
 
 ### Lab5:CacheLab
 
@@ -89,8 +91,15 @@ Lab-Notes 文件夹包括各实验完成中的总结经验
 10. 6月26日
     - Lab 2 截止 
     - Lab 3 发放
-11. 6月27日-28日
+11. 6月27日-29日
     - 程序代码优化
     - Lec 10 Code Optimization
     - 教材 第五章
-12. 
+12. 6月30日
+    - 存储器的层析结构
+    - Lec 11 The Memory Hrerarchy
+    - 教材 6.1-6.3
+13. 7月1日
+    - 高速缓存存储器(Cache)
+    - Lec 12 Cache Memories
+    - 教材 6.4-6.6
