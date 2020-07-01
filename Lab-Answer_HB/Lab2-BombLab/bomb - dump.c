@@ -4,12 +4,6 @@
 #include "support.h"
 #include "phases.h"
 
-/* 
- * Note to self: Remember to erase this file so my victims will have no
- * idea what is going on, and so they will all blow up in a
- * spectaculary fiendish explosion. -- Dr. Evil 
- */
-
 FILE *infile;
 
 int main(int argc, char *argv[])
@@ -81,11 +75,11 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-/* main函数的汇编
+/* main函数的汇编 虽然没啥用
 Dump of assembler code for function main:
-   0x0000000000400da0 <+0>:	push   %rbx         //保存寄存器rbx
-   0x0000000000400da1 <+1>:	cmp    $0x1,%edi    //$1与%edi(函数第一个参数)比较, 判断函数参数数目
-   0x0000000000400da4 <+4>:	jne    0x400db6 <main+22>   //如果是参数不为1 , 
+   0x0000000000400da0 <+0>:	push   %rbx         
+   0x0000000000400da1 <+1>:	cmp    $0x1,%edi   
+   0x0000000000400da4 <+4>:	jne    0x400db6 <main+22>   
    0x0000000000400da6 <+6>:	mov    0x20299b(%rip),%rax        # 0x603748 <stdin@@GLIBC_2.2.5>
    0x0000000000400dad <+13>:	mov    %rax,0x2029b4(%rip)        # 0x603768 <infile>
    0x0000000000400db4 <+20>:	jmp    0x400e19 <main+121>
@@ -106,9 +100,6 @@ Dump of assembler code for function main:
    0x0000000000400dee <+78>:	mov    $0x8,%edi
    0x0000000000400df3 <+83>:	callq  0x400c20 <exit@plt>
    0x0000000000400df8 <+88>:	mov    (%rsi),%rdx
-
-
-
  */
 
 /* 输入参数与 ($0x402400)是否相同,不同炸*/
@@ -136,8 +127,8 @@ phase_1(){
 
 /* 参数12为地址, 比较两个指向是否相同,相同返回0不同返回1 */
 strings_not_equal(){
-    /* rdi = *input; esi = $0x402400
-    Dump of assembler code for function strings_not_equal:
+/* rdi = *input; esi = $0x402400
+Dump of assembler code for function strings_not_equal:
     0x0000000000401338 <+0>:	push   %r12
     0x000000000040133a <+2>:	push   %rbp
     0x000000000040133b <+3>:	push   %rbx     //以上保存环境
@@ -182,29 +173,26 @@ strings_not_equal(){
 
 /* 输入字符指针, 返回指向的字符串长度, 空返回0 */
 string_length(){
-
-
-    /* rdi = *input; 
-    Dump of assembler code for function string_length:
-   0x000000000040131b <+0>:	cmpb   $0x0,(%rdi)      
-   0x000000000040131e <+3>:	je     0x401332 <string_length+23>  //如果input空, 转23(返回0)
-   0x0000000000401320 <+5>:	mov    %rdi,%rdx        //rdx = *input
-   0x0000000000401323 <+8>:	add    $0x1,%rdx        //rdx ++ 每轮将指针+1 
-   0x0000000000401327 <+12>:	mov    %edx,%eax    //eax =rdx
-   0x0000000000401329 <+14>:	sub    %edi,%eax    //eax -= edi, 当前指针与原指针差值
-   0x000000000040132b <+16>:	cmpb   $0x0,(%rdx)  //指针指向与0比较
-   0x000000000040132e <+19>:	jne    0x401323 <string_length+8>//当指向非零, 表示还未结束 递归调用
-   0x0000000000401330 <+21>:	repz retq   //返还rax 即最后的差值, 为指针储存的数据的长度
-   0x0000000000401332 <+23>:	mov    $0x0,%eax    //(上接+3) 返回0
-   0x0000000000401337 <+28>:	retq  
+/* rdi = *input; 
+Dump of assembler code for function string_length:
+    0x000000000040131b <+0>:	cmpb   $0x0,(%rdi)      
+    0x000000000040131e <+3>:	je     0x401332 <string_length+23>  //如果input空, 转23(返回0)
+    0x0000000000401320 <+5>:	mov    %rdi,%rdx        //rdx = *input
+    0x0000000000401323 <+8>:	add    $0x1,%rdx        //rdx ++ 每轮将指针+1 
+    0x0000000000401327 <+12>:	mov    %edx,%eax    //eax =rdx
+    0x0000000000401329 <+14>:	sub    %edi,%eax    //eax -= edi, 当前指针与原指针差值
+    0x000000000040132b <+16>:	cmpb   $0x0,(%rdx)  //指针指向与0比较
+    0x000000000040132e <+19>:	jne    0x401323 <string_length+8>//当指向非零, 表示还未结束 递归调用
+    0x0000000000401330 <+21>:	repz retq   //返还rax 即最后的差值, 为指针储存的数据的长度
+    0x0000000000401332 <+23>:	mov    $0x0,%eax    //(上接+3) 返回0
+    0x0000000000401337 <+28>:	retq  
     */
 }
 
 /* 输入6个规律数字 */
 phase_2(){
-    /* 
-    Dump of assembler code for function phase_2:
-    //rdi *input
+/* rdi *input
+Dump of assembler code for function phase_2:
     0x0000000000400efc <0+>:	push   %rbp
     0x0000000000400efd <+1>:	push   %rbx			//保存环境
     0x0000000000400efe <+2>:	sub    $0x28,%rsp   //栈分28位
@@ -233,19 +221,18 @@ phase_2(){
      */
 }
 
-/* 不懂 */
+/* 将栈中数据写入内存 */
 read_six_numbers(){
-    /* 
-    Dump of assembler code for function read_six_numbers:
-    //rdi *input    rsi 栈指针
+/* rdi *input    rsi 栈指针
+Dump of assembler code for function read_six_numbers:
     0x000000000040145c <+0>:	sub    $0x18,%rsp       //分配18
     0x0000000000401460 <+4>:	mov    %rsi,%rdx        //rdx = 原栈指针
-    0x0000000000401463 <+7>:	lea    0x4(%rsi),%rcx   //rcx = (原栈2)
-    0x0000000000401467 <+11>:	lea    0x14(%rsi),%rax  //rax = (原栈+14)
-    0x000000000040146b <+15>:	mov    %rax,0x8(%rsp)   //(栈+8) = 原栈+14
-    0x0000000000401470 <+20>:	lea    0x10(%rsi),%rax  //rax = (原栈+10)
-    0x0000000000401474 <+24>:	mov    %rax,(%rsp)      //(rsp) = rax = (原栈+10)
-    0x0000000000401478 <+28>:	lea    0xc(%rsi),%r9    //r9 = (rsi+c)
+    0x0000000000401463 <+7>:	lea    0x4(%rsi),%rcx   //rcx = (栈4)
+    0x0000000000401467 <+11>:	lea    0x14(%rsi),%rax  //rax = (栈20)
+    0x000000000040146b <+15>:	mov    %rax,0x8(%rsp)   //(栈+8) = 栈20
+    0x0000000000401470 <+20>:	lea    0x10(%rsi),%rax  //rax = (栈+16)
+    0x0000000000401474 <+24>:	mov    %rax,(%rsp)      //(rsp) = rax = (原栈+16)
+    0x0000000000401478 <+28>:	lea    0xc(%rsi),%r9    //r9 = (rsi+12)
     0x000000000040147c <+32>:	lea    0x8(%rsi),%r8    //r8 = (rsi+8)
     0x0000000000401480 <+36>:	mov    $0x4025c3,%esi   //si = $0x4025c3
     0x0000000000401485 <+41>:	mov    $0x0,%eax        //ax = 0
@@ -256,14 +243,13 @@ read_six_numbers(){
     0x0000000000401499 <+61>:	add    $0x18,%rsp       //收回18
     0x000000000040149d <+65>:	retq  
      */
-
 }
 
 /* 输入2个数字,与8组数据比较,不同炸 */
 phase_3(){
     /* 
-    rdi = &input
-    Dump of assembler code for function phase_3:
+rdi = &input
+Dump of assembler code for function phase_3:
    0x0000000000400f43 <+0>:	    sub    $0x18,%rsp               //栈扩18
    0x0000000000400f47 <+4>:	    lea    0xc(%rsp),%rcx           //rcx = &(栈12)
    0x0000000000400f4c <+9>:	    lea    0x8(%rsp),%rdx           //rdx = &(栈8)
@@ -405,6 +391,7 @@ Dump of assembler code for function func4:
     */
 }
 
+/* 输入长度为6的字符串并比较 */
 phase_5(){
     /* 
 %rdi &input
@@ -454,8 +441,6 @@ Dump of assembler code for function phase_5:
 
 }
 
-
-
 /* 注解p5_1 fs段寄存器
     8086CPU将内存分段，并设计了 4 个段寄存器，CS，DS，ES 和 SS，分别用于指令、数据、其它和堆栈。
     FS、GS 是从 80386 开始增加的两个辅助段寄存器，没有全称，取名就是按字母序排在 CS、DS、ES 之后的。 
@@ -473,7 +458,6 @@ char 类型占有1个字节(8bits)的空间, 代码中对于每个字符, 取后
 >
 > 访问该地址, 得到映射字符`l` , 并存入栈11处 (11是第二个字符对应栈中的位置)
  */
-
 
 /* 注解p5_3 0x4024b0附近存储的字符
     (gdb) print (char) *(0x4024b0+0x0)
@@ -525,5 +509,170 @@ char 类型占有1个字节(8bits)的空间, 代码中对于每个字符, 取后
     $16 = 108 'l'
  */
 
+/* 输入数字1-6,有顺序要求 */
+phase_6(){
+    /* 
+%rdi &input
+Dump of assembler code for function phase_6:
+   0x00000000004010f4 <+0>:	push   %r14
+   0x00000000004010f6 <+2>:	push   %r13
+   0x00000000004010f8 <+4>:	push   %r12
+   0x00000000004010fa <+6>:	push   %rbp
+   0x00000000004010fb <+7>:	push   %rbx
+   0x00000000004010fc <+8>:	sub    $0x50,%rsp
+   0x0000000000401100 <+12>:	mov    %rsp,%r13
+   0x0000000000401103 <+15>:	mov    %rsp,%rsi
+   0x0000000000401106 <+18>:	callq  0x40145c <read_six_numbers>  //读入6个数字
+   0x000000000040110b <+23>:	mov    %rsp,%r14
+   0x000000000040110e <+26>:	mov    $0x0,%r12d   
+   0x0000000000401114 <+32>:	mov    %r13,%rbp                //rbp=r13 外循环1起始
+   0x0000000000401117 <+35>:	mov    0x0(%r13),%eax              
+   0x000000000040111b <+39>:	sub    $0x1,%eax                //ax=(r13)-1
+   0x000000000040111e <+42>:	cmp    $0x5,%eax                //ax与5比较
+   0x0000000000401121 <+45>:	jbe    0x401128 <phase_6+52>    //ax>5 炸
+   0x0000000000401123 <+47>:	callq  0x40143a <explode_bomb>
+   0x0000000000401128 <+52>:	add    $0x1,%r12d               //r12++  r12为外循环索引
+   0x000000000040112c <+56>:	cmp    $0x6,%r12d               //比较r12与6
+   0x0000000000401130 <+60>:	je     0x401153 <phase_6+95>    //循环6次 结束转95(外循环 1)
+   0x0000000000401132 <+62>:	mov    %r12d,%ebx
+   0x0000000000401135 <+65>:	movslq %ebx,%rax                //里循环起始
+   0x0000000000401138 <+68>:	mov    (%rsp,%rax,4),%eax       //ax = 栈[r12]
+   0x000000000040113b <+71>:	cmp    %eax,0x0(%rbp)           //比较(r13)与ax
+   0x000000000040113e <+74>:	jne    0x401145 <phase_6+81>    //不等于 转81 等于 炸
+   0x0000000000401140 <+76>:	callq  0x40143a <explode_bomb>
+   0x0000000000401145 <+81>:	add    $0x1,%ebx                //bx++ bx为里循环索引
+   0x0000000000401148 <+84>:	cmp    $0x5,%ebx                
+   0x000000000040114b <+87>:	jle    0x401135 <phase_6+65>    //若bx<=5, 即数2~数5 循环65 (里循环 2)
+   0x000000000040114d <+89>:	add    $0x4,%r13                //现在数6,r13=下一个数字栈地址
+   0x0000000000401151 <+93>:	jmp    0x401114 <phase_6+32>    //转32(外循环) 
+   //循环12: 外循环保证每个数字均∈[1,6] , 里循环保证数字各不相同
+   //方便起见, 称输入的6个数字为a[i],i∈[0,5]
+   0x0000000000401153 <+95>:	lea    0x18(%rsp),%rsi          //rsi=栈+24 (栈0~20存储数1-6)
+   0x0000000000401158 <+100>:	mov    %r14,%rax                //ax=栈0地址
+   0x000000000040115b <+103>:	mov    $0x7,%ecx                //cx=7
+   0x0000000000401160 <+108>:	mov    %ecx,%edx                //dx = cx       循环3起始
+   0x0000000000401162 <+110>:	sub    (%rax),%edx              //dx -= *ax
+   0x0000000000401164 <+112>:	mov    %edx,(%rax)              //*ax = dx
+   0x0000000000401166 <+114>:	add    $0x4,%rax                //ax指向下一个数字  ax为循环3索引
+   0x000000000040116a <+118>:	cmp    %rsi,%rax                //如果ax!=栈+24
+   0x000000000040116d <+121>:	jne    0x401160 <phase_6+108>   //转108 循环3
+   0x000000000040116f <+123>:	mov    $0x0,%esi                //si = 0   
+   0x0000000000401174 <+128>:	jmp    0x401197 <phase_6+163>   //转163         循环3结束
+   //循环3: 使每数1-数6与原地对7取补(1->6,2->5) 称取补后的数为b[i]=7-a[i]
+   0x0000000000401176 <+130>:	mov    0x8(%rdx),%rdx           //dx += 0x8
+   0x000000000040117a <+134>:	add    $0x1,%eax                //ax++
+   0x000000000040117d <+137>:	cmp    %ecx,%eax                //比较数补与ax
+   0x000000000040117f <+139>:	jne    0x401176 <phase_6+130>   //不等 转130
+   0x0000000000401181 <+141>:	jmp    0x401188 <phase_6+148>   //等 转148
+   0x0000000000401183 <+143>:	mov    $0x6032d0,%edx           //dx = 0x6032d0
+   0x0000000000401188 <+148>:	mov    %rdx,0x20(%rsp,%rsi,2)   //(栈+2*si+32)=dx
+   0x000000000040118d <+153>:	add    $0x4,%rsi                //si+=4         si作为循环4索引
+   0x0000000000401191 <+157>:	cmp    $0x18,%rsi               //若si==24 
+   0x0000000000401195 <+161>:	je     0x4011ab <phase_6+183>   //转183         循环4结束
+   0x0000000000401197 <+163>:	mov    (%rsp,%rsi,1),%ecx       //cx = (栈+si)  循环4起始 
+   0x000000000040119a <+166>:	cmp    $0x1,%ecx                //cx 与 1比较
+   0x000000000040119d <+169>:	jle    0x401183 <phase_6+143>   //若cx<=1 转143 
+   0x000000000040119f <+171>:	mov    $0x1,%eax                //ax = 1
+   0x00000000004011a4 <+176>:	mov    $0x6032d0,%edx           //dx = 0x6032d0
+   0x00000000004011a9 <+181>:	jmp    0x401176 <phase_6+130>   //转130
+   //循环4: 使(栈32+8*(i-1))=0x6032d0+b[i]*16 
+   //称地址 栈32+8*(i-1) 为d0~d5
+   //称其中储存的数据,即0x6032d0+b[i]*16,为k0~k5
+   0x00000000004011ab <+183>:	mov    0x20(%rsp),%rbx          //bx = k[0]
+   0x00000000004011b0 <+188>:	lea    0x28(%rsp),%rax          //ax = &k[1] = d[0]
+   0x00000000004011b5 <+193>:	lea    0x50(%rsp),%rsi          //si = &栈+0x50 = d[6]
+   0x00000000004011ba <+198>:	mov    %rbx,%rcx                //cx = bx
+   0x00000000004011bd <+201>:	mov    (%rax),%rdx              //dx = (ax)  循环5起始
+   0x00000000004011c0 <+204>:	mov    %rdx,0x8(%rcx)           //cx+8储存dx 例如 k0+8储存k1 k4+8储存k5
+   0x00000000004011c4 <+208>:	add    $0x8,%rax                //ax = &(下一个)
+   0x00000000004011c8 <+212>:	cmp    %rsi,%rax
+   0x00000000004011cb <+215>:	je     0x4011d2 <phase_6+222>   //循环5结束 转222
+   0x00000000004011cd <+217>:	mov    %rdx,%rcx                //rcx = k5  
+   0x00000000004011d0 <+220>:	jmp    0x4011bd <phase_6+201>   //转201
+   //循环5:  k0+8储存k1 v4+8储存k5
+   //若将k[i]作为地址,指向数字v[i]
+   0x00000000004011d2 <+222>:	movq   $0x0,0x8(%rdx)           //k5+8储存0
+   0x00000000004011da <+230>:	mov    $0x5,%ebp                //bp=5  作为索引
+   0x00000000004011df <+235>:	mov    0x8(%rbx),%rax           //ax = (k[i]+8) = k[i+1]   循环6起始
+   0x00000000004011e3 <+239>:	mov    (%rax),%eax              //ax = (k[i+1]) = v[i+1]
+   0x00000000004011e5 <+241>:	cmp    %eax,(%rbx)              //比较(rbx) 与 ax , bx=k[i], (bx)=v[i]
+   0x00000000004011e7 <+243>:	jge    0x4011ee <phase_6+250>   //若(rbx)>ax 转 250
+   0x00000000004011e9 <+245>:	callq  0x40143a <explode_bomb>
+   0x00000000004011ee <+250>:	mov    0x8(%rbx),%rbx           //bx+=8
+   0x00000000004011f2 <+254>:	sub    $0x1,%ebp                //bp-1  
+   0x00000000004011f5 <+257>:	jne    0x4011df <phase_6+235>   //循环6
+   //循环6: 保证v[i]>v[i+1]
+   0x00000000004011f7 <+259>:	add    $0x50,%rsp               
+   0x00000000004011fb <+263>:	pop    %rbx
+   0x00000000004011fc <+264>:	pop    %rbp
+   0x00000000004011fd <+265>:	pop    %r12
+   0x00000000004011ff <+267>:	pop    %r13
+   0x0000000000401201 <+269>:	pop    %r14
+   0x0000000000401203 <+271>:	retq   
+ */
+}
+
+/* 注解p6_1 0x6032d0附近储存的值
+    (gdb) print *(int*) (0x6032d0+16*0)
+    $83 = 332
+    (gdb) print *(int*) (0x6032d0+16*1)
+    $84 = 168
+    (gdb) print *(int*) (0x6032d0+16*2)
+    $85 = 924
+    (gdb) print *(int*) (0x6032d0+16*3)
+    $86 = 691
+    (gdb) print *(int*) (0x6032d0+16*4)
+    $88 = 477
+    (gdb) print *(int*) (0x6032d0+16*5)
+    $89 = 443
+ */
+
+/* 答案
+若使得v[0]~v[5]依次为924,691,477,443,332,168
+则b[i]-1 应依次为: 2,3,4,5,0,1
+原值a[i] 应依次为: 4,3,2,1,6,5
+ */
 
 
+
+
+/* 故事还没有结束... */
+phase_defuse(){
+    /* 
+Dump of assembler code for function phase_defused:
+    0x00000000004015c4 <+0>:	sub    $0x78,%rsp
+    0x00000000004015c8 <+4>:	mov    %fs:0x28,%rax
+    0x00000000004015d1 <+13>:	mov    %rax,0x68(%rsp)
+    0x00000000004015d6 <+18>:	xor    %eax,%eax
+    0x00000000004015d8 <+20>:	cmpl   $0x6,0x202181(%rip)        # 0x603760 <num_input_strings>
+    0x00000000004015df <+27>:	jne    0x40163f <phase_defused+123>
+    0x00000000004015e1 <+29>:	lea    0x10(%rsp),%r8
+    0x00000000004015e6 <+34>:	lea    0xc(%rsp),%rcx
+    0x00000000004015eb <+39>:	lea    0x8(%rsp),%rdx
+    0x00000000004015f0 <+44>:	mov    $0x402619,%esi
+    0x00000000004015f5 <+49>:	mov    $0x603870,%edi
+    0x00000000004015fa <+54>:	callq  0x400bf0 <__isoc99_sscanf@plt>
+    0x00000000004015ff <+59>:	cmp    $0x3,%eax
+    0x0000000000401602 <+62>:	jne    0x401635 <phase_defused+113>
+    0x0000000000401604 <+64>:	mov    $0x402622,%esi
+    0x0000000000401609 <+69>:	lea    0x10(%rsp),%rdi
+    0x000000000040160e <+74>:	callq  0x401338 <strings_not_equal>
+    0x0000000000401613 <+79>:	test   %eax,%eax
+    0x0000000000401615 <+81>:	jne    0x401635 <phase_defused+113>
+    0x0000000000401617 <+83>:	mov    $0x4024f8,%edi
+    0x000000000040161c <+88>:	callq  0x400b10 <puts@plt>
+    0x0000000000401621 <+93>:	mov    $0x402520,%edi
+    0x0000000000401626 <+98>:	callq  0x400b10 <puts@plt>
+    0x000000000040162b <+103>:	mov    $0x0,%eax
+    0x0000000000401630 <+108>:	callq  0x401242 <secret_phase>
+    0x0000000000401635 <+113>:	mov    $0x402558,%edi
+    0x000000000040163a <+118>:	callq  0x400b10 <puts@plt>
+    0x000000000040163f <+123>:	mov    0x68(%rsp),%rax
+    0x0000000000401644 <+128>:	xor    %fs:0x28,%rax
+    0x000000000040164d <+137>:	je     0x401654 <phase_defused+144>
+    0x000000000040164f <+139>:	callq  0x400b30 <__stack_chk_fail@plt>
+    0x0000000000401654 <+144>:	add    $0x78,%rsp
+    0x0000000000401658 <+148>:	retq  
+    
+     */
+}
