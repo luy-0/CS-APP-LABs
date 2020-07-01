@@ -31,9 +31,7 @@ Lab-Notes 文件夹包括各实验完成中的总结经验
 
 ### Lab4:PerformanceLab
 
-6.30-?
-
-*注: 不限时操作*
+7.1-7.15
 
 ### Lab5:CacheLab
 
