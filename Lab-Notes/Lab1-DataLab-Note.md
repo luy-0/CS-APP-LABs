@@ -43,7 +43,7 @@
 
 但是我们没有或（or）操作符，所以我们需要通过~（not，非）和&（and，与）来得到，看到这张图，相信聪明的你会想到怎么做了。
 
-<img src="C:\Users\Levick\source\github\CSAPP\CS-APP-LABs\Lab-Notes\img\image-20200621222306462.png" alt="image-20200621222306462" style="zoom:67%;" />
+<img src=".\img\image-20200621222306462.png" alt="image-20200621222306462" style="zoom:67%;" />
 
 ​							                                              $X + Y{ = }\sim(XY)$
 
@@ -213,7 +213,9 @@ requirement:
 故参考答案如下：
 
 ```c
-1
+int isLessOrEqual(int x, int y) {
+  return !((y+~x+1)>>31);
+}
 ```
 
 ## 9.logicalNeg
@@ -238,7 +240,9 @@ requirement:
 故参考答案如下：
 
 ```c
-1
+int logicalNeg(int x) {
+  return ((x|(~x+1))>>31)+1;
+}
 ```
 
 ## 10.howManyBits
@@ -260,4 +264,33 @@ requirement:
  */
 ```
 
-根据观察我们发现，正数（或0）中符号位后第一串连续的0和负数中符号位后第一串连续的1去掉后不影响结果
+​	根据观察我们发现，正数（或0）中符号位后第一串连续的0和负数中符号位后第一串连续的1去掉后不影响结果，也就是说我们需要在正数里面找1，负数里面找0。但是我们不能使用条件语句，所以我们需要转换。这里我们采用对正数的判断方法，如果不是正数则按位取反，最后结果是一致的（比如-1，1111，最少需要1位，结果为1；取反为0000，按正数判断方法也是最少需要一位0，结果仍然是1）。
+
+​	如何做到正数不变，负数按位取反？
+
+​	令`int sign = x>>31`，若x为正数或0，sign为全0，若x为负数，sign为全1（算术右移，要补符号位），然后再令 $x=sign \oplus x$ ，（比如$ 1111 \oplus 1101=0010 $ ,转换后结果仍为3）即可。
+
+​	之后我们的任务就是找出x中的1，对此我们采用2分法，即16->8>4>2>1>0的步长依次移位确定1的位置。
+
+故参考答案如下：
+
+```c
+int howManyBits(int x) {
+    int sign=x>>31;
+    x=(sign&~x)|(~sign&x);//negative:negate by bits,else unchanged
+    int b16,b8,b4,b2,b1,b0;//to see if there is 1 in relative bit
+    b16=!!(x>>16)<<4;//found 1 in first 16 bits?
+    x=x>>b16;//if so,right shift 16 bits, else 0 bit
+    b8=!!(x>>8)<<3;//found 1 in next 8 bits?
+    x=x>>b8;//if so,right shift 8 bits, else 0 bits
+    b4=!!(x>>4)<<2;//same as above
+    x=x>>b4;
+    b2=!!(x>>2)<<1;
+    x=x>>b2;
+    b1=!!(x>>1);
+    x=x>>b1;
+    b0=x;
+    return b16+b8+b4+b2+b1+b0+1;//b0 is actually 0, 1 here is the sign bit.
+}
+```
+
