@@ -251,7 +251,22 @@ int logicalNeg(int x) {
  *  Rating: 4
  */
 int howManyBits(int x) {
-  return 0;
+    int sign=x>>31;
+    x=(sign&~x)|(~sign&x);//negative:negate by bits,else unchanged
+    int b16,b8,b4,b2,b1,b0;//to see if there is 1 in relative bit
+    b16=!!(x>>16)<<4;//found 1 in first 16 bits?
+    x=x>>b16;//if so,right shift 16 bits, else 0 bit
+    b8=!!(x>>8)<<3;//found 1 in next 8 bits?
+    x=x>>b8;//if so,right shift 8 bits, else 0 bits
+    b4=!!(x>>4)<<2;//same as above
+    x=x>>b4;
+    b2=!!(x>>2)<<1;
+    x=x>>b2;
+    b1=!!(x>>1);
+    x=x>>b1;
+    b0=x;
+    return b16+b8+b4+b2+b1+b0+1;//b0 is actually 0, 1 here is the sign bit.
+
 }
 //float
 /* 
