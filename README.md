@@ -101,3 +101,18 @@ Lab-Notes 文件夹包括各实验完成中的总结经验
     - 高速缓存存储器(Cache)
     - Lec 12 Cache Memories
     - 教材 6.4-6.6
+    - Lab 4 发放
+14. 7月3日
+    - 链接
+    - Lec 13 Linking
+    - 教材第七章
+    - Lab 3 截止
+15. 7月4日
+    - 异常1
+    - Lec 14 Exceptional Control Flow  Exceptions and Processes
+    - 教材8.1-8.4
+16. 7月5日
+    - 异常2
+    - Lec 15 Exceptional Control Flow Signals and Nonlocal Jumps
+    - 教材8.5-8.7
+
