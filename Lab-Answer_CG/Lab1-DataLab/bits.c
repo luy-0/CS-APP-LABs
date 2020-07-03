@@ -145,7 +145,8 @@ NOTES:
 int bitXor(int x, int y) {
   int o1=x&(~y);
   int o2=(~x)&y;
-  return ~(o1&o2);
+  return ~(~o1&~o2);
+
 }
 /* 
  * tmin - return minimum two's complement integer 
@@ -179,9 +180,9 @@ int isTmax(int x) {
 int allOddBits(int x) {
   int a= 0xAA;
   int b=(a<<8)+a;//0x AA AA
-  int c=(b<<8)+b;//0X AA AA AA
-  int d=(c<<8)+c;//0X AA AA AA AA
-  return !(d | (x>>1));
+  int c=(b<<16)+b;//0X AA AA AA AA
+  return !((c | (x>>1))+1);
+//  return !((c&x)^c);// this one ok too;
 }
 /* 
  * negate - return -x 
@@ -204,7 +205,7 @@ int negate(int x) {
  *   Rating: 3
  */
 int isAsciiDigit(int x) {
-  return ( (x+(~48+1))>>31 )& ( (x+(~58+1))>>31 );
+  return!(( (x+(~48+1))>>31 )| ( (57+(~x+1))>>31 ));
 }
 /* 
  * conditional - same as x ? y : z 
@@ -224,7 +225,14 @@ int conditional(int x, int y, int z) {
  *   Rating: 3
  */
 int isLessOrEqual(int x, int y) {
-  return !((y+~x+1)>>31);
+  int xsign=(x>>31)&1;//get the sign bit of x
+  int ysign=(y>>31)&1;//get the sign bit of y
+  int dif=(y+~x+1);//difference of x&y
+  int dif_sign=(dif>>31)&1;//sign bit of dif
+  int vf=(xsign&ysign&(!dif_sign))|((!xsign)&(!ysign)&dif_sign);//spillover?
+  int is_opp=(xsign^ysign)&(xsign);//x>=0,y<0
+  int overflow=(!vf)&(!xsign)&ysign;//positive spillover
+  return ((!dif_sign)|is_opp)&(!overflow);
 }
 //4
 /* 
