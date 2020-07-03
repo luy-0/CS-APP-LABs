@@ -144,7 +144,9 @@ NOTES:
  *   Rating: 1
  */
 int bitXor(int x, int y) {
-  int re = (~x)&y;
+  int c1 = x & (~y);
+  int c2 = (~x) & y;
+  int re = ~(c1 & c2);
   return re;
 }
 /* 
@@ -174,6 +176,7 @@ int isTmax(int x) {
   /* 
   不能用条件语句
   构造映射: Tmax->1; others -> 0;
+  Tmax = 1000 0000 ... 0000
    */
   int tmin = 1 << 31;
   int tmp = tmin | x;   //全部是1
