@@ -144,7 +144,7 @@ NOTES:
  */
 int bitXor(int x, int y) {
   int o1=x&(~y);
-  int o1=(~x)&y;
+  int o2=(~x)&y;
   return ~(o1&o2);
 }
 /* 
@@ -166,7 +166,7 @@ int tmin(void) {
  */
 int isTmax(int x) {
   int tmp=~x;
-  return !(2*tmp)&!(!tmp);
+  return !(tmp+tmp)&!(!tmp);
 }
 /* 
  * allOddBits - return 1 if all odd-numbered bits in word set to 1
@@ -181,7 +181,7 @@ int allOddBits(int x) {
   int b=(a<<8)+a;//0x AA AA
   int c=(b<<8)+b;//0X AA AA AA
   int d=(c<<8)+c;//0X AA AA AA AA
-  return !(d | (x>>1))
+  return !(d | (x>>1));
 }
 /* 
  * negate - return -x 
@@ -214,7 +214,7 @@ int isAsciiDigit(int x) {
  *   Rating: 3
  */
 int conditional(int x, int y, int z) {
-  return  ((!x+~1+1)&y)+(~!x+1)&z);
+  return  ((!x+~1+1)&y)+((~!x+1)&z);
 }
 /* 
  * isLessOrEqual - if x <= y  then return 1, else return 0 
