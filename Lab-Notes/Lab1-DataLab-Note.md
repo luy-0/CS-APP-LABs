@@ -6,7 +6,11 @@
 
 `Please read problems think thoroughly before you check this notes`
 
-[reference](https://wdxtub.com/csapp/thick-csapp-lab-1/2016/04/16/)
+[reference1](https://wdxtub.com/csapp/thick-csapp-lab-1/2016/04/16/)
+
+[reference2][https://zhuanlan.zhihu.com/p/59534845?utm_source=qq]
+
+`Note:`请在纯linux环境中按照datalab.pdf的操作步骤运行（实测win、ras-pi ，make失败），并且请安装`gcc-multilib`，sudo apt-get install gcc-multilib, 即可。
 
 首先弄复习一遍操作符含义
 
@@ -41,19 +45,19 @@
 
 ​                                                                   $Z = X \oplus Y = X\overline Y  + \overline X Y$
 
-但是我们没有或（or）操作符，所以我们需要通过~（not，非）和&（and，与）来得到，看到这张图，相信聪明的你会想到怎么做了。
+但是我们没有或（or）操作符，所以我们需要通过~（not，非）和&（and，与）来得到。
 
-<img src=".\img\image-20200621222306462.png" alt="image-20200621222306462" style="zoom:67%;" />
 
-​							                                              $X + Y{ = }\sim(XY)$
+
+​							                                              $X + Y{ = }\sim(XY)=\sim x\&\sim y$
 
 故答案可以为：
 
 ```c
 int bitXor(int x, int y) {
   int o1=x&(~y);
-  int o1=(~x)&y;
-  return ~(o1&o2);
+  int o2=(~x)&y;
+  return ~(~o1&~o2);
 }
 ```
 
@@ -116,9 +120,9 @@ Answer:
 int allOddBits(int x) {
   int a= 0xAA;
   int b=(a<<8)+a;//0x AA AA
-  int c=(b<<8)+b;//0X AA AA AA
-  int d=(c<<8)+c;//0X AA AA AA AA
-  return !(d | (x>>1))
+  int c=(b<<16)+b;//0X AA AA AA AA
+  return !((c | (x>>1))+1);
+//  return !((c&x)^c);// this one ok too;
 }
 ```
 
@@ -158,13 +162,13 @@ requirement:
 
 判断ascII值是不是0到9，首先我们明确，‘0’=48=0x30，‘9’=58=0x39，所输入x应该在此范围内，x-‘0’>=0,x-'9'<=0.
 
-如何实现减法？补码减法直接取反加一，因此，x-'0'=x+(~48+1)，后同。
+如何实现减法？补码减法直接取反加一，因此，x-'0'=x+(\~48+1)，57-x=57+\~x+1。
 
 故，参考答案如下：
 
 ```c
 int isAsciiDigit(int x) {
-  return ( (x+(~48+1))>>31 )& ( (x+(~58+1))>>31 );
+  return !(( (x+(~48+1))>>31 )| ( (57+(~x+1))>>31 ));
 }
 ```
 
@@ -190,7 +194,7 @@ requirement:
 
 ```c
 int conditional(int x, int y, int z) {
-  return ((!x+~1+1)&y)+(~!x+1)&z;
+  return ((!x+~1+1)&y)+((~!x+1)&z);
 }
 ```
 
@@ -208,15 +212,38 @@ requirement:
  */
 ```
 
-判断x,y大小关系，那我们可以用y-x，若结果符号为正（0）则说明x<=y，返回1，若符号为负（1），则说明x>y返回0，结果可以通过符号位取反得到
+​	这题乍看很简单，经过初步分析你可能得出以下思路：
+
+`判断x,y大小关系，那我们可以用y-x，若结果符号为正（0）则说明x<=y，返回1，若符号为负（1），则说明x>y返回0，结果可以通过符号位取反得到`
+
+​	同学醒醒，这题三分呢，咋会两行就出答案（至少这题不是哦）。我们还需要郑重地考虑溢出的问题，单用差的符号位判断的是未溢出的情况；对于溢出我们还应该判断是上溢（超过所能表示最大整数）还是下溢（小于所能表示最小负数），如果是下溢，则也应该返回1；另外我们还要排除上溢的情况。
+
+​	总得来说就是以下三种情况：
+
+> - 差符号为1
+>   - 加上下溢的
+>   - 提出上溢的
 
 故参考答案如下：
 
 ```c
 int isLessOrEqual(int x, int y) {
-  return !((y+~x+1)>>31);
+  int xsign=(x>>31)&1;//get the sign bit of x
+  int ysign=(y>>31)&1;//get the sign bit of y
+  int dif=(y+~x+1);//difference of x&y
+  int dif_sign=(dif>>31)&1;//sign bit of dif
+  int vf=(xsign&ysign&(!dif_sign))|((!xsign)&(!ysign)&dif_sign);//spillover?
+  int is_opp=(xsign^ysign)&(xsign);//x>=0,y<0
+  int overflow=(!vf)&(!xsign)&ysign;//positive spillover
+  return ((!dif_sign)|is_opp)&(!overflow);
 }
 ```
+
+你可能会问的问题。
+
+问：为什么你直接is_opp和！dir_sign相或，不是说好了求负溢出吗？，is_opp只是表示两数符号相反且x正（或0），y负，但是包含了负溢出的情况且其他情况，所以和dif_sign直接相或。又不能是正溢出，前两者相或的结果与!overflow相与即可。图胜千言，如下。
+
+![image-20200704003401716](.\img\image-20200704003401716.png)
 
 ## 9.logicalNeg
 

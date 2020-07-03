@@ -157,3 +157,40 @@ little endian order&big endian order [参考1][https://blog.csdn.net/waitingbb12
 `mechanical `: 机械的，固定的
 
 `propagate`: 相加
+
+
+
+## L5 Machine Level Programming | Basis
+
+### Terminology
+
+-: hyphen,连字符
+
+### Normal
+
+`accrual`: 自然积累，逐渐形成， v,n
+
+> It's been an accrual and evolution of different features layered on top of each other.
+
+`pejorative`:  贬义的，用于侮辱的，带有侮辱性质的
+
+> He used the word 'girl' in the pejorative sense when referring to the women who worked for him.
+
+goofy
+
+scratch the surface
+
+sneaked in
+
+13.47
+
+ferocious 
+
+patent suit
+
+miraculous
+
+sheeplishly
+
+
+
