@@ -289,7 +289,13 @@ int howManyBits(int x) {
  *   Rating: 4
  */
 unsigned floatScale2(unsigned uf) {
-  return 2;
+  int exp=(uf&0x7f800000)>>23;//obtain the value of E
+  int sign=uf&(1<<31);//if negative,0x10000000,else, 0x00000000
+  if(exp==255) return uf;
+  if(exp==0) return uf<<1|sign;
+  exp++;
+  if(exp==255) return 0x7f800000|sign;//return infinite
+  return (exp<<23)|(uf&0x807fffff);
 }
 /* 
  * floatFloat2Int - Return bit-level equivalent of expression (int) f
@@ -304,7 +310,8 @@ unsigned floatScale2(unsigned uf) {
  *   Rating: 4
  */
 int floatFloat2Int(unsigned uf) {
-  return 2;
+     
+    return 2;
 }
 /* 
  * floatPower2 - Return bit-level equivalent of the expression 2.0^x
