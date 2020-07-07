@@ -1,7 +1,5 @@
 # Lab1-DataLab-Note
 
-可以在本md中记录学习心得, 经验, 总结, 以及走过的坑!
-
 `Notes by Levick Cheng` 网页阅读请安装[MathJax Plugin for Github](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima?hl=zh-CN)
 
 `Please read problems think thoroughly before you check this notes`
@@ -47,9 +45,7 @@
 
 但是我们没有或（or）操作符，所以我们需要通过~（not，非）和&（and，与）来得到。
 
-
-
-​							                                              $X + Y= \sim(XY)=\sim x\&\sim y$
+![image-20200707140415732](./img/image-20200707140415732.png)
 
 故答案可以为：
 
@@ -431,7 +427,7 @@ int floatFloat2Int(unsigned uf) {
 > - exp==255，全1，为特殊值（无穷或NaN）_或_E>30在int表示范围外，按题目要求返回0x80000000u
 >   - 特别的为什么是E>30而不是31呢，int绝对值小于`2^31`，在最小值取到。因为规格化浮点数M有默认的1，所以就算是表示最小值也只有在（0xcf000000）时可以表示，但正好返回	0x80000000u被解释为最小负数-2147483648。（自己可以调试一下理解过程，输入值为3472883712）。于是只要E>30即可，int最小值这一边界情况刚好覆盖。
 > - E<0或exp==0，E<1说明表示的为<1的数，exp全0说明是denorm，也小于1，返回0
-> -  规格化浮点数，正常进行移位运算。（注意在最前面加一以标准化）
+> - 规格化浮点数，正常进行移位运算。（注意在最前面加一以标准化）
 >   - 真值=$(-1)^s\times(2)^{E}\times1.M$
 >   - 为什么是23？frac有23位，我们直接解释的话已经将结果左移了23位，所以阶码E的值要减去23.
 > - 如果之前符号为负，取反。因为用frac储存答案，默认为正
