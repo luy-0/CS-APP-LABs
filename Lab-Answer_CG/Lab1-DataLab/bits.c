@@ -274,7 +274,6 @@ int howManyBits(int x) {
     x=x>>b1;
     b0=x;
     return b16+b8+b4+b2+b1+b0+1;//b0 is actually 0, 1 here is the sign bit.
-
 }
 //float
 /* 
@@ -310,8 +309,25 @@ unsigned floatScale2(unsigned uf) {
  *   Rating: 4
  */
 int floatFloat2Int(unsigned uf) {
-     
-    return 2;
+    int sign=uf>>31&1;
+    int frac=uf&0x007fffff;//get frac bits
+    int exp=(uf>>23)&0xff;//get exp bits
+    //now convert 
+    int E=exp-127;//single precision,bias is 127
+    //pay attention to the difference between E and frac
+    if(exp==255||E>30){
+	    return 0x80000000u;}//too large too represent(abs>2^31) 
+    else if(E<0||!exp){
+	    return 0;}//too small to represent(<1),cast to 0
+    //add 1 to the front to normalize
+    frac=frac|1<<23;
+    if(E>23){
+	    frac=frac<<(E-23);} 
+    else{
+	    frac=frac>>(23-E);}
+    if(sign){
+            return ~frac+1;}//original number was negative,negate.    
+    return frac;
 }
 /* 
  * floatPower2 - Return bit-level equivalent of the expression 2.0^x
@@ -327,5 +343,9 @@ int floatFloat2Int(unsigned uf) {
  *   Rating: 4
  */
 unsigned floatPower2(int x) {
-    return 2;
+    int INF=0xff<<23;//positive infinite
+    int exp=x+127;//x=E=exp-127
+    if(exp<0) return 0;//too small for fp number,cast to 0
+    if(exp>=255) return INF;    
+    return exp<<23;
 }
