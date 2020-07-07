@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 IEEE754.svg 页-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="6.64002in" height="3.65537in"
+		viewBox="0 0 478.081 263.187" xml:space="preserve" color-interpolation-filters="sRGB" class="st2">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:none;stroke:none;stroke-width:0.25}
+		.st2 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(0.25,-0.25)">
+			<title>工作表.1</title>
+			<rect v:rectContext="foreign" x="0" y="0.499993" width="477.581" height="262.687" class="st1"/>
+			<switch>
+				<foreignObject x="0" y="0.499993" width="477.581" height="262.687"
+						requiredExtensions="http://schemas.microsoft.com/visio/2003/SVGExtensions/">
+					<v:foreignData v:orgSize="87884" v:data="data:metafile;base64,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
+								RP5FQ/l88faAkFOw7SADpoRx/n5g/weZ69k0Ozxm1/mByPGnbGPm7zB1C1JMRm2p8/cDTMxvwBhU+CgFO83/f+ip9EpImaiL
+								qaijc5TRBTw4vNW5TzbN/Y3qqepG1Hnu0PtoFDW8/2MxA/LxODqSf0rUpwwhkfvsxzylFtbodwkgDbCQ9+Vm60GguMZeZZ+Y
+								q/GyWl9R/lkfFetP1Ifa5ubK2XhePHfV9W5PVha0V9yta63pWthdBEdBzGuTMgs2a9L43JVrFP/aIYWbFPfffEPv7OxD71pd
+								invui71XfpeI9lI4gWMIgHoe9tjPeEnfE+HbZ7o8x9TUv9uP7sQ4zrPnbHdTa9QWdR/3dc93lsxvWvhXH9G8W9cT2wIozpDT
+								lJgO0n47oNO32m7ExKezPXI+O6aFvuuP6Km8Z1iD/nH2wuK5ae755YuoEzc6DmS7H0fDEemO/yWHoCHOgNGGwABSx0MpYegs
+								ajXNTo6zjEP9vpWNrHeHXjZOfHeF/7vvs2Q2dR/3eM931sxvhFCn6Mj/e7N8anxVBt5vTkJAG2n4zxNuw0uD0k2VO+u2j7Uf
+								vuy6Uxfjk3xqt3OzbGHwj1DfqgjaxcTZB7cjULZI/xuGxSriZIjAGCXP7cIs+H991jfW377g96bpENbadHBq6fYYzhZxYNZY
+								zzy2DnwsfOl08GXz6XG+dXoHvva+Dji0PvjfNCx+fGp8FW5xBIrGv1ffnIKLr4PfF/Io9w77JCReevb6jO0GhM4nH4zHKfia
+								m5xTnFz0d8jxXvV/ynHad0XPHX/DSeQ/weyCEPzRsKAhEO8IZKqHeFjXPw/ipW2wOFPvohiAkq6TvQM3z5Y+WEcRDf1zNBVM
+								IzQZOS/DnB21RCUvDNxLZBMWlNKtxMxNtVSuAvZMVDAU7w0GPUzz+x7uek8cJj0s/9ZfRz/2J15K4+/aC+u5vg++6vRMl997
+								sIKuG7iElJ8TWx4G0q4d8aNxMDa8akVal1MxFvP+m79/puBXZC8uPRdwNk9N0Ar+y7R334vvuXT8l9t3UHKqF1h0lJSznB21
+								SCtv3NxKEdYtLGdLyZiLcfRd8tDT7/jUOjEm80eMsjPr9oW67Pv8198/EbzVi7vZ6MfH0j9+Trg515v7uRlK9vJOaHGrk8r4
+								NzDMugc0bACRd9ncvrNJh0q3e3HsaOXYS+1wWV7jkSuXX2JHkKg6Jtb8VgO6XvosANjmMQn++e3Grj4u+yVXEot7pIyq0uEu
+								P3RS6PuycTPAbXKWxj8EFxd+vXifF9B24bZo3B0o7DgTu6JXsKh6Jtb8XhgVDf0IXvO45DfL578l+Li+HwcAWH8l+hUv4rVO
+								TUUJfjsI0Pj8MsX+dx2CEzd8jD4PCxXOPkcPMUZNyf5NwaJ4Elr3FS/fdUY9vEzt/M3MTphdWeTV1Tleb0a9s6dh5V/dnUzA
+								6fp2HdcvzetIGUH5xnTluyQ9sYa/EzPv7V7T2cXtViF6dnfhrVCes9Vxak0LM2pfbacSp/FNjrtUNbwhongY/dGifDIRA7Gm
+								F/nZFPBhyNoAbsBFkeIa5PQg1A6HSY/TVOqAH7wt7ovyHsTL8NnKYGLAYZG2Z9jU+C7NumBrwd9MmAGUHDB84Iun+NkxsweO
+								bADb5RAaG9Pk/WOLFl54tjcSkfvq3yCPeJtr04Dmwx9yNZcWAL98SBlYpxX2iIQ3FgCykObCH6si1czn1vA970ULj9cGCTwj
+								nu65H+z4SvXw20lCUf9IslXT2HQ8G2i3D4KN5ZyQv7RFYsmOeeWLBl8fnyFR2KBfOkWDBP9GXzXI7DL2BHXyhcClj+0EkcZk
+								HL6dEYjv8qC2WpVdpxOKSP53Ao2HY9H7rsvZWwZbtkxYJh7okF3yz+7lg5h2LBMCkWDBN5Nczl85g7BfN8uDDYNh8+aB5zOY
+								uPT6nnP+wL1uzoOT8UbHsr/4Hv1jrMJMsPbe0ePzS8GO7Yig75oa0lP7S1yKOtXY477Idug8KZQFd08v2B9ugMXV8G7vqBna
+								4+jxnu6idwfT9QXc5nDlTSCwo+f5IinhK1mTZ2ecqMvjvE607naHZQmhnl3qbV05LNqJtfIrtGbVafqpCoHtHOzF6umMgeiz
+								Wr/6qSqO7QxAytlmic14DXn9XkdRBpVi8IS0Q/h5jZjZUSUbtAs/pgSCJ6gzCrvymXiCoUmdidikQU/KvJmH6LRhW/NaHcn2
+								m0+2MTOr6LRtWXmtDkLTTKWGgy1n2PNk6ebjLuz6ORKsdkHPEyjXqmmojqk2lUuZGJ6D6CRs+E83p+RRNae4rXAy7z+kgRjZ
+								6uZEJV/qFRZLjJuA4lomNVTWyUTyJKjTSpr/kmoucpE7vLPxG929wEZU1EQzuaUA6Uc29Pk7FjdU6jX8hErk/lzVSL2vJ+dZ
+								ZgTWq04nsWZdeiUWGyCWkn0ehqngl9/hqNdn5oMn6/kkb1C0zGwo00iv7OZLy4g0aNz5lQQxNt6XHThFYW0OgLwoyqH6TRpU
+								C+HTqH8vq8kter65hR8Jc0WynGjCaxtLpRczO6+BHNdmpjRkfW0ahPvBnFvcnrgtGcJoo608Yfm5iJO2246xCBb6slPQGONw
+								uhjZfVZmI+TaOYFDNaPpRGbVPN6PvZNErpbEajl/H9QewfPjb+CMJq0+pDCedMh3oLU5czWvVvi/35YrZzYyXNLcDfvT/HZd
+								ICZoW1dF8oYRzAmDml7Ur+qe1BBur6ktV1OlKle5psqhtHttHNINvpFoGsBtlKttWZyZa6w2Rj3Umyru4KGa67SwboQpTXtA
+								2UX2k7KT/Tpiu3awcp12pHKJdqX1TO176snKVdoux/736K2cZln6XNU14F6Sdw3/3n4LH0Hzjuq3tDWV73urKSbrGS1L2qrK
+								abq6ypm62M0hmVdXTjOBuNSvg+rudkON5eV6hsrsXyFWcrt4Rzw3EZtOuVOu1k5TxtqnKltolys7a6cpe2vHK/9m/yG+1l8j
+								vtSfKE9hB5SsuCfADyFvmD9mXysHYyWaAdTX6sHU6uA3kJ5DntNHIYnGPv/tvA8TbaYaS9XGKGVkvmajPIGdpe5Bva7uQGaC
+								8TSHuhrcXcYAdhDCwATvgCPyMDfUdRvH/IzQ12EgKposdt3L/ZIeXDQW25cb8ZlL2eDz/u9xO5cc0EGh2tBuPOEk4TaQNoNO
+								NFE1GYxetmIzjd97ex9HpmigkFGWk0byqMVzPp/O+nm9C0uXT+ldkmtGExjQ7OM2m2vEOjP5eY8qe+R+drlpmQcgONLq8waT
+								Z8QGuMq00xP22hjcfWmYxrttHGSxtNx3K300bLhyaUAeNhs494/cInnNZ8vos7rnmN5c5HJ83c9/NV+7jroRkF/PX/AD37fR
+								pFHTMhnzu8/hDG9+jPTeuNt+n8YbtM6JUrtObbzSY09SSNBr0H4y6MwyFQ/i6f0Wjutyz6eR+9oftGNiZlP62ptpg1vvglja
+								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"/>
+				</foreignObject>
+				<!-- Unsupported Record: EmfPlusRecordTypeSetPixelOffsetMode  -->
+				<svg viewBox="-0.70833 -0.70968 3978 2192.2" height="262.687" preserveAspectRatio="none" width="477.581" x="0"
+						y="0.499993">
+					<clipPath id="mfid1">
+						<rect x="-0.70833" y="-0.70968" width="3978" height="2192.2" id="mfid2"/>
+					</clipPath>
+					<g clip-path="url(#mfid1)">
+						<mask id="mfid3">
+							<rect width="3978" height="2192" fill="white" stroke="none"/>
+						</mask>
+						<mask id="mfid4" fill="white" stroke="none">
+							<g>
+								<g mask="url(#mfid3)">
+									<use xlink:href="#mfid2"/>
+								</g>
+							</g>
+						</mask>
+						<!-- GetDC -->
+						<mask id="mfid5" fill-rule="evenodd" fill="white" stroke="none">
+							<rect x="0" y="0" width="3978" height="2192"/>
+						</mask>
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 1427.3, 186)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="150">
+										<text stroke="none" fill="#000000" x="0,40,113,186,259,293,369,445,521" y="0"
+												transform="translate(0,0)" xml:space="preserve">IEEE 754</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 1948.3, 186)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="150">
+										<text stroke="none" fill="#000000" x="0,150,300,450,600,750" y="0"
+												transform="translate(0,0)" xml:space="preserve">标准浮点数</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<defs>
+							<path id="mfid6"
+									d="M140210,1735800 C101490,1735800 70104,1730600 70104,1724200 L70104,879600 C70104,873150 38717,867920 0.000000000013812,867920 C38717,867920 70104,862690 70104,856230 L70104,11684 C70104,5231.2 101490,-0.00000000003453 140210,-0.000000000069061"/>
+						</defs>
+						<g mask="url(#mfid4)">
+							<g transform="matrix(0.00065617, 0, 0, 0.00065617, 2102, 711)">
+								<g stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid6" fill="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2208.2, 713)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="100">
+										<text stroke="none" fill="#000000" x="0,100,200,300,400,500,600" y="0"
+												transform="translate(0,0)" xml:space="preserve">规格化浮点数</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2208.2, 834)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="100">
+										<text stroke="none" fill="#000000" x="0,31,97,151,187,268,317,342,367,405,455,509,540"
+												y="0" transform="translate(0,0)" xml:space="preserve">(Normalized)</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2208.2, 1326.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="100">
+										<text stroke="none" fill="#000000" x="0,100,200,300,400,500,600,700" y="0"
+												transform="translate(0,0)" xml:space="preserve">非规格化浮点数</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2208.2, 1447.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="100">
+										<text stroke="none" fill="#000000"
+												x="0,31,94,144,198,252,288,369,418,443,468,506,556,610,641" y="0"
+												transform="translate(0,0)" xml:space="preserve">(Denormalized)</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2254.3, 1881.8)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="100">
+										<text stroke="none" fill="#000000" x="0,100,200,300" y="0" transform="translate(0,0)"
+												xml:space="preserve">特殊值</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 213.01, 808.62)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="100">
+										<text stroke="none" fill="#000000" x="0,27,76,125,174" y="0" transform="translate(0,0)"
+												xml:space="preserve">IEEE</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 410.01, 808.62)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="100">
+										<text stroke="none" fill="#000000" x="0,51,102,153" y="0" transform="translate(0,0)"
+												xml:space="preserve">754</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 563.01, 808.62)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="100">
+										<text stroke="none" fill="#000000" x="0,100,200,300,400,500" y="0"
+												transform="translate(0,0)" xml:space="preserve">浮点数组成</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<defs>
+							<path id="mfid7" d="M0,0 L132590,0 L132590,121920 L0,121920 Z"/>
+						</defs>
+						<g mask="url(#mfid4)">
+							<g transform="matrix(0.00065617, 0, 0, 0.00065617, 153, 883)">
+								<g stroke-width="9525" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid7" fill="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 172.98, 957.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="100">
+										<text stroke="none" fill="#000000" x="0,47" y="0" transform="translate(0,0)"
+												xml:space="preserve">S</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<defs>
+							<path id="mfid8" d="M0,0 L681230,0 L681230,121920 L0,121920 Z"/>
+						</defs>
+						<g mask="url(#mfid4)">
+							<g transform="matrix(0.00065617, 0, 0, 0.00065617, 241, 883)">
+								<g stroke-width="9525" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid8" fill="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 376.99, 962.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="117">
+										<text stroke="none" fill="#000000" x="0,57,111,174" y="0" transform="translate(0,0)"
+												xml:space="preserve">exp</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<defs>
+							<path id="mfid9" d="M0,0 L932690,0 L932690,121920 L0,121920 Z"/>
+						</defs>
+						<g mask="url(#mfid4)">
+							<g transform="matrix(0.00065617, 0, 0, 0.00065617, 693, 883)">
+								<g stroke-width="9525" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid9" fill="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 919.88, 957.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="100">
+										<text stroke="none" fill="#000000" x="0,32,66,115,157" y="0" transform="translate(0,0)"
+												xml:space="preserve">frac</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<defs>
+							<path id="mfid10" d="M2.6667,-13.333 L0,0 L-2.6667,-13.333 Z"/>
+						</defs>
+						<defs>
+							<path id="mfid11" d="M0,0 L1,292810"/>
+						</defs>
+						<g mask="url(#mfid4)">
+							<g transform="matrix(0.00065617, 0, 0, 0.00065617, 196, 963)">
+								<g fill="#000000">
+									<marker id="mfid12" markerUnits="strokeWidth" orient="align" overflow="visible">
+										<g transform="rotate(-45)" stroke-linecap="butt" stroke-miterlimit="10">
+											<use xlink:href="#mfid10" fill-rule="nonzero" stroke="none" fill="#000000"/>
+										</g>
+									</marker>
+								</g>
+								<g stroke-width="9525" stroke="#000000" marker-end="url(#mfid12)" stroke-miterlimit="8">
+									<use xlink:href="#mfid11" fill="none"/>
+									<defs>
+										<path id="mfid13" d="M2.6667,-13.333 L0,0 L-2.6667,-13.333 Z"/>
+									</defs>
+									<defs>
+										<path id="mfid14" d="M0,0 L1,292810"/>
+									</defs>
+								</g>
+							</g>
+							<g transform="matrix(-0.00065617, 0, 0, 0.00065617, 465, 963)">
+								<g fill="#000000"/>
+								<g stroke-width="9525" stroke="#000000" marker-end="url(#mfid12)" stroke-miterlimit="8">
+									<use xlink:href="#mfid14" fill="none"/>
+									<defs>
+										<path id="mfid15" d="M2.6667,-13.333 L0,0 L-2.6667,-13.333 Z"/>
+									</defs>
+									<defs>
+										<path id="mfid16" d="M0,0 L1,292810"/>
+									</defs>
+								</g>
+							</g>
+							<g transform="matrix(-0.00065617, 0, 0, 0.00065617, 999, 963)">
+								<g fill="#000000"/>
+								<g stroke-width="9525" stroke="#000000" marker-end="url(#mfid12)" stroke-miterlimit="8">
+									<use xlink:href="#mfid16" fill="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 59.952, 1241.2)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225" y="0" transform="translate(0,0)"
+												xml:space="preserve">符号位</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 382.27, 1241.2)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225,300" y="0" transform="translate(0,0)"
+												xml:space="preserve">阶码字段</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 822.88, 1241.2)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225,300" y="0" transform="translate(0,0)"
+												xml:space="preserve">尾数字段</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<defs>
+							<path id="mfid17"
+									d="M123440,795530 C89356,795530 61722,790920 61722,785240 L61722,408050 C61722,402370 34088,397760 0.00000000001266,397760 C34088,397760 61722,393160 61722,387480 L61722,10287 C61722,4605.6 89356,-0.000000000015825 123440,-0.00000000003165"/>
+						</defs>
+						<g mask="url(#mfid4)">
+							<g transform="matrix(0.00065617, 0, 0, 0.00065617, 2845, 401)">
+								<g stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid17" fill="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2973.4, 670.46)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225,300" y="0" transform="translate(0,0)"
+												xml:space="preserve">偏移量（</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3273.4, 670.46)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,40,58,95,125" y="0" transform="translate(0,0)"
+												xml:space="preserve">bias</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3398.4, 670.46)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75" y="0" transform="translate(0,0)"
+												xml:space="preserve">）</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2973.4, 764.46)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,37" y="0" transform="translate(0,0)"
+												xml:space="preserve">=</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<defs>
+							<path id="mfid18"
+									d="M22.266,-50.574 C25.854,-50.574 28.784,-50.092 31.055,-49.127 C33.325,-48.163 34.967,-46.857 35.98,-45.209 C36.993,-43.561 37.5,-41.638 37.5,-39.441 C37.5,-37.512 37.14,-35.718 36.42,-34.058 C35.699,-32.397 34.454,-30.505 32.684,-28.381 C30.914,-26.257 27.93,-23.218 23.73,-19.263 C22.437,-18.042 20.892,-16.437 19.098,-14.447 C17.303,-12.457 15.881,-10.754 14.832,-9.3384 L14.832,-8.9722 L27.832,-8.9722 C29.419,-8.9722 30.603,-9.0881 31.384,-9.3201 C32.166,-9.552 32.782,-9.9548 33.234,-10.529 C33.685,-11.102 34.058,-11.963 34.351,-13.11 L38.562,-13.11 L37.72,0 L4.1748,0 L4.1748,-2.417 C6.0547,-6.7383 9.8999,-12.305 15.71,-19.116 C18.347,-22.217 20.355,-24.768 21.735,-26.77 C23.114,-28.772 24.146,-30.664 24.829,-32.446 C25.513,-34.229 25.854,-36.072 25.854,-37.976 C25.854,-40.662 25.256,-42.767 24.06,-44.293 C22.864,-45.819 21.228,-46.582 19.153,-46.582 C15.173,-46.582 12.622,-43.713 11.499,-37.976 L4.9072,-37.976 L4.9072,-46.619 C8.8867,-48.23 12.097,-49.292 14.539,-49.805 C16.98,-50.317 19.556,-50.574 22.266,-50.574 Z"/>
+						</defs>
+						<g mask="url(#mfid4)">
+							<g transform="matrix(1, 0, 0, 1, 3010.4, 764.46)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid18" fill-rule="evenodd" stroke="none"/>
+									<defs>
+										<path id="mfid19"
+												d="M15.603,-38.457 L18.638,-38.457 L13.643,-15.845 L14.18,-15.845 C14.824,-15.845 15.433,-15.961 16.006,-16.194 C16.704,-16.48 17.563,-16.991 18.584,-17.725 C19.963,-18.745 20.938,-19.542 21.511,-20.115 C22.084,-20.688 22.483,-21.229 22.706,-21.74 C22.93,-22.25 23.042,-22.773 23.042,-23.311 C23.042,-23.722 22.93,-24.071 22.706,-24.358 C22.483,-24.644 22.084,-24.814 21.511,-24.868 L21.941,-26.641 L31.501,-26.641 L32.173,-24.895 C31.063,-23.678 29.568,-22.353 27.688,-20.92 L21.646,-16.382 L24.412,-6.5796 C24.734,-5.4159 25.034,-4.6281 25.311,-4.2163 C25.589,-3.8045 25.978,-3.5986 26.479,-3.5986 C26.945,-3.5986 27.473,-3.8359 28.064,-4.3103 C28.655,-4.7847 29.353,-5.4964 30.159,-6.4453 L32.092,-4.5117 C30.427,-2.7214 28.923,-1.4502 27.581,-0.69824 C26.238,0.053711 24.859,0.42969 23.445,0.42969 C21.672,0.42969 20.294,0.008952 19.309,-0.83252 C18.324,-1.674 17.608,-3.1152 17.161,-5.1562 L15.737,-11.602 C15.648,-12.031 15.531,-12.371 15.388,-12.622 C15.245,-12.873 15.057,-13.052 14.824,-13.159 C14.591,-13.267 14.242,-13.32 13.777,-13.32 L13.105,-13.32 L10.178,0 L2.4707,0 L9.2651,-30.347 C9.659,-32.101 9.856,-33.381 9.856,-34.187 C9.856,-34.581 9.8157,-34.89 9.7351,-35.114 C9.6545,-35.337 9.5337,-35.521 9.3726,-35.664 C9.2114,-35.807 8.9966,-35.919 8.728,-36 C8.4595,-36.08 7.9313,-36.174 7.1436,-36.282 L7.5732,-38.027 Z"/>
+									</defs>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3055.4, 737.46)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid19" fill-rule="evenodd" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3089.4, 737.46)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect x="4.5386" y="-17.778" width="30.937" height="4.1089" stroke="none"/>
+									<defs>
+										<path id="mfid20"
+												d="M18.423,-37.087 L21.86,-37.087 C21.753,-35.369 21.699,-32.987 21.699,-29.944 L21.699,-7.4927 C21.699,-6.4543 21.757,-5.671 21.874,-5.1428 C21.99,-4.6147 22.196,-4.185 22.491,-3.8538 C22.787,-3.5225 23.212,-3.2629 23.767,-3.075 C24.322,-2.887 25.02,-2.7437 25.862,-2.6453 C26.703,-2.5468 27.813,-2.4797 29.192,-2.4438 L29.192,0 L6.0156,0 L6.0156,-2.4438 C8.0029,-2.5334 9.4218,-2.6542 10.272,-2.8064 C11.123,-2.9586 11.772,-3.1868 12.219,-3.4912 C12.667,-3.7956 12.994,-4.2253 13.199,-4.7803 C13.405,-5.3353 13.508,-6.2394 13.508,-7.4927 L13.508,-26.909 C13.508,-27.643 13.37,-28.171 13.092,-28.494 C12.815,-28.816 12.434,-28.977 11.951,-28.977 C11.503,-28.977 10.872,-28.771 10.057,-28.359 C9.2428,-27.948 7.9045,-27.106 6.0425,-25.835 L4.4043,-28.682 Z"/>
+									</defs>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3128.4, 737.46)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid20" fill-rule="evenodd" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3179.4, 764.46)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect x="5.4565" y="-23.877" width="45.117" height="4.8706" stroke="none"/>
+									<defs>
+										<path id="mfid21"
+												d="M25.122,-50.574 L29.81,-50.574 C29.663,-48.23 29.59,-44.983 29.59,-40.833 L29.59,-10.217 C29.59,-8.8013 29.669,-7.7332 29.828,-7.0129 C29.987,-6.2927 30.267,-5.7068 30.67,-5.2551 C31.073,-4.8035 31.653,-4.4495 32.41,-4.1931 C33.167,-3.9368 34.119,-3.7415 35.266,-3.6072 C36.414,-3.4729 37.927,-3.3813 39.807,-3.3325 L39.807,0 L8.2031,0 L8.2031,-3.3325 C10.913,-3.4546 12.848,-3.6194 14.008,-3.8269 C15.167,-4.0344 16.052,-4.3457 16.663,-4.7607 C17.273,-5.1758 17.719,-5.7617 17.999,-6.5186 C18.28,-7.2754 18.42,-8.5083 18.42,-10.217 L18.42,-36.694 C18.42,-37.695 18.231,-38.416 17.853,-38.855 C17.474,-39.294 16.956,-39.514 16.296,-39.514 C15.686,-39.514 14.825,-39.233 13.715,-38.672 C12.604,-38.11 10.779,-36.963 8.2397,-35.229 L6.0059,-39.111 Z"/>
+									</defs>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3252.4, 764.46)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid21" fill-rule="evenodd" stroke="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3298.4, 764.46)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75" y="0" transform="translate(0,0)"
+												xml:space="preserve">，</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3373.4, 764.46)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,37,74,112" y="0" transform="translate(0,0)"
+												xml:space="preserve">E=e</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3485.4, 764.46)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,23" y="0" transform="translate(0,0)"
+												xml:space="preserve">-</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3508.4, 764.46)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,40,58,95,125" y="0" transform="translate(0,0)"
+												xml:space="preserve">bias</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 213.01, 1507.7)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="88">
+										<text stroke="none" fill="#000000" x="0,88,176,264" y="0" transform="translate(0,0)"
+												xml:space="preserve">阶码：</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 477.01, 1507.7)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="88">
+										<text stroke="none" fill="#000000" x="0,43" y="0" transform="translate(0,0)"
+												xml:space="preserve">E</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 213.01, 1612.7)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="88">
+										<text stroke="none" fill="#000000" x="0,88,176,264" y="0" transform="translate(0,0)"
+												xml:space="preserve">尾数：</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 477.01, 1612.7)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="88">
+										<text stroke="none" fill="#000000" x="0,77" y="0" transform="translate(0,0)"
+												xml:space="preserve">M</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2935.2, 939.23)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225,300,375,450,525,600,675" y="0"
+												transform="translate(0,0)" xml:space="preserve">尾数字段最高位省略</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3610.2, 939.23)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,38" y="0" transform="translate(0,0)"
+												xml:space="preserve">1</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<defs>
+							<path id="mfid22"
+									d="M76200,679700 C55158,679700 38100,676860 38100,673350 L38100,346200 C38100,342690 21042,339850 0.0000000000081127,339850 C21042,339850 38100,337010 38100,333500 L38100,6349.6 C38100,2842.8 55158,-0.000000000013521 76201,-0.000000000027042"/>
+						</defs>
+						<g mask="url(#mfid4)">
+							<g transform="matrix(0.00065617, 0, 0, 0.00065617, 2926, 1049)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid22" fill="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3006.6, 1227.3)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225,300" y="0" transform="translate(0,0)"
+												xml:space="preserve">偏移量（</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3306.6, 1227.3)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,40,58,95,125" y="0" transform="translate(0,0)"
+												xml:space="preserve">bias</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3431.6, 1227.3)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75" y="0" transform="translate(0,0)"
+												xml:space="preserve">）</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3006.6, 1321.3)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,37" y="0" transform="translate(0,0)"
+												xml:space="preserve">=</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<defs>
+							<path id="mfid23"
+									d="M22.266,-50.574 C25.854,-50.574 28.784,-50.092 31.055,-49.127 C33.325,-48.163 34.967,-46.857 35.98,-45.209 C36.993,-43.561 37.5,-41.638 37.5,-39.441 C37.5,-37.512 37.14,-35.718 36.42,-34.058 C35.699,-32.397 34.454,-30.505 32.684,-28.381 C30.914,-26.257 27.93,-23.218 23.73,-19.263 C22.437,-18.042 20.892,-16.437 19.098,-14.447 C17.303,-12.457 15.881,-10.754 14.832,-9.3384 L14.832,-8.9722 L27.832,-8.9722 C29.419,-8.9722 30.603,-9.0881 31.384,-9.3201 C32.166,-9.552 32.782,-9.9548 33.234,-10.529 C33.685,-11.102 34.058,-11.963 34.351,-13.11 L38.562,-13.11 L37.72,0 L4.1748,0 L4.1748,-2.417 C6.0547,-6.7383 9.8999,-12.305 15.71,-19.116 C18.347,-22.217 20.355,-24.768 21.735,-26.77 C23.114,-28.772 24.146,-30.664 24.829,-32.446 C25.513,-34.229 25.854,-36.072 25.854,-37.976 C25.854,-40.662 25.256,-42.767 24.06,-44.293 C22.864,-45.819 21.228,-46.582 19.153,-46.582 C15.173,-46.582 12.622,-43.713 11.499,-37.976 L4.9072,-37.976 L4.9072,-46.619 C8.8867,-48.23 12.097,-49.292 14.539,-49.805 C16.98,-50.317 19.556,-50.574 22.266,-50.574 Z"/>
+						</defs>
+						<g mask="url(#mfid4)">
+							<g transform="matrix(1, 0, 0, 1, 3043.6, 1321.3)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid23" fill-rule="evenodd" stroke="none"/>
+									<defs>
+										<path id="mfid24"
+												d="M15.603,-38.457 L18.638,-38.457 L13.643,-15.845 L14.18,-15.845 C14.824,-15.845 15.433,-15.961 16.006,-16.194 C16.704,-16.48 17.563,-16.991 18.584,-17.725 C19.963,-18.745 20.938,-19.542 21.511,-20.115 C22.084,-20.688 22.483,-21.229 22.706,-21.74 C22.93,-22.25 23.042,-22.773 23.042,-23.311 C23.042,-23.722 22.93,-24.071 22.706,-24.358 C22.483,-24.644 22.084,-24.814 21.511,-24.868 L21.941,-26.641 L31.501,-26.641 L32.173,-24.895 C31.063,-23.678 29.568,-22.353 27.688,-20.92 L21.646,-16.382 L24.412,-6.5796 C24.734,-5.4159 25.034,-4.6281 25.311,-4.2163 C25.589,-3.8045 25.978,-3.5986 26.479,-3.5986 C26.945,-3.5986 27.473,-3.8359 28.064,-4.3103 C28.655,-4.7847 29.353,-5.4964 30.159,-6.4453 L32.092,-4.5117 C30.427,-2.7214 28.923,-1.4502 27.581,-0.69824 C26.238,0.053711 24.859,0.42969 23.445,0.42969 C21.672,0.42969 20.294,0.008952 19.309,-0.83252 C18.324,-1.674 17.608,-3.1152 17.161,-5.1562 L15.737,-11.602 C15.648,-12.031 15.531,-12.371 15.388,-12.622 C15.245,-12.873 15.057,-13.052 14.824,-13.159 C14.591,-13.267 14.242,-13.32 13.777,-13.32 L13.105,-13.32 L10.178,0 L2.4707,0 L9.2651,-30.347 C9.659,-32.101 9.856,-33.381 9.856,-34.187 C9.856,-34.581 9.8157,-34.89 9.7351,-35.114 C9.6545,-35.337 9.5337,-35.521 9.3726,-35.664 C9.2114,-35.807 8.9966,-35.919 8.728,-36 C8.4595,-36.08 7.9313,-36.174 7.1436,-36.282 L7.5732,-38.027 Z"/>
+									</defs>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3088.6, 1294.3)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid24" fill-rule="evenodd" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3122.6, 1294.3)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect x="4.5386" y="-17.778" width="30.937" height="4.1089" stroke="none"/>
+									<defs>
+										<path id="mfid25"
+												d="M18.423,-37.087 L21.86,-37.087 C21.753,-35.369 21.699,-32.987 21.699,-29.944 L21.699,-7.4927 C21.699,-6.4543 21.757,-5.671 21.874,-5.1428 C21.99,-4.6147 22.196,-4.185 22.491,-3.8538 C22.787,-3.5225 23.212,-3.2629 23.767,-3.075 C24.322,-2.887 25.02,-2.7437 25.862,-2.6453 C26.703,-2.5468 27.813,-2.4797 29.192,-2.4438 L29.192,0 L6.0156,0 L6.0156,-2.4438 C8.0029,-2.5334 9.4218,-2.6542 10.272,-2.8064 C11.123,-2.9586 11.772,-3.1868 12.219,-3.4912 C12.667,-3.7956 12.994,-4.2253 13.199,-4.7803 C13.405,-5.3353 13.508,-6.2394 13.508,-7.4927 L13.508,-26.909 C13.508,-27.643 13.37,-28.171 13.092,-28.494 C12.815,-28.816 12.434,-28.977 11.951,-28.977 C11.503,-28.977 10.872,-28.771 10.057,-28.359 C9.2428,-27.948 7.9045,-27.106 6.0425,-25.835 L4.4043,-28.682 Z"/>
+									</defs>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3161.6, 1294.3)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid25" fill-rule="evenodd" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3212.6, 1321.3)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect x="5.4565" y="-23.877" width="45.117" height="4.8706" stroke="none"/>
+									<defs>
+										<path id="mfid26"
+												d="M25.122,-50.574 L29.81,-50.574 C29.663,-48.23 29.59,-44.983 29.59,-40.833 L29.59,-10.217 C29.59,-8.8013 29.669,-7.7332 29.828,-7.0129 C29.987,-6.2927 30.267,-5.7068 30.67,-5.2551 C31.073,-4.8035 31.653,-4.4495 32.41,-4.1931 C33.167,-3.9368 34.119,-3.7415 35.266,-3.6072 C36.414,-3.4729 37.927,-3.3813 39.807,-3.3325 L39.807,0 L8.2031,0 L8.2031,-3.3325 C10.913,-3.4546 12.848,-3.6194 14.008,-3.8269 C15.167,-4.0344 16.052,-4.3457 16.663,-4.7607 C17.273,-5.1758 17.719,-5.7617 17.999,-6.5186 C18.28,-7.2754 18.42,-8.5083 18.42,-10.217 L18.42,-36.694 C18.42,-37.695 18.231,-38.416 17.853,-38.855 C17.474,-39.294 16.956,-39.514 16.296,-39.514 C15.686,-39.514 14.825,-39.233 13.715,-38.672 C12.604,-38.11 10.779,-36.963 8.2397,-35.229 L6.0059,-39.111 Z"/>
+									</defs>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3285.6, 1321.3)">
+								<g fill="#000000" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid26" fill-rule="evenodd" stroke="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3331.6, 1321.3)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75" y="0" transform="translate(0,0)"
+												xml:space="preserve">，</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3406.6, 1321.3)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,37,74,112" y="0" transform="translate(0,0)"
+												xml:space="preserve">E=1</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3518.6, 1321.3)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,23" y="0" transform="translate(0,0)"
+												xml:space="preserve">-</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3541.6, 1321.3)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,40,58,95,125" y="0" transform="translate(0,0)"
+												xml:space="preserve">bias</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3008, 1428.6)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225,300,375,450,525" y="0"
+												transform="translate(0,0)" xml:space="preserve">尾数字段不包含</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3008, 1518.6)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225" y="0" transform="translate(0,0)"
+												xml:space="preserve">隐含的</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3233, 1518.6)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,38" y="0" transform="translate(0,0)"
+												xml:space="preserve">1</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<g mask="url(#mfid4)">
+							<g transform="matrix(1, 0, 0, 1, 2960.7, 425.19)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect y="-72" width="111" height="92" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3071.7, 425.19)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect y="-72" width="225" height="92" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3296.7, 425.19)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect y="-72" width="38" height="92" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3334.7, 425.19)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect y="-72" width="225" height="92" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3559.7, 425.19)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect y="-72" width="38" height="92" stroke="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2960.7, 425.19)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,37,71,111" y="0" transform="translate(0,0)"
+												xml:space="preserve">Exp</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3071.7, 425.19)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225" y="0" transform="translate(0,0)"
+												xml:space="preserve">不为全</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3296.7, 425.19)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,38" y="0" transform="translate(0,0)"
+												xml:space="preserve">0</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3334.7, 425.19)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225" y="0" transform="translate(0,0)"
+												xml:space="preserve">或者全</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3559.7, 425.19)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,38" y="0" transform="translate(0,0)"
+												xml:space="preserve">1</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<g mask="url(#mfid4)">
+							<g transform="matrix(1, 0, 0, 1, 3005.1, 1091.4)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect y="-72" width="111" height="92" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3116.1, 1091.4)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect y="-72" width="75" height="92" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 3191.1, 1091.4)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect y="-72" width="38" height="92" stroke="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3005.1, 1091.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,37,71,111" y="0" transform="translate(0,0)"
+												xml:space="preserve">Exp</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3116.1, 1091.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75" y="0" transform="translate(0,0)"
+												xml:space="preserve">全</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3191.1, 1091.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,38" y="0" transform="translate(0,0)"
+												xml:space="preserve">0</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<defs>
+							<path id="mfid27"
+									d="M97536,534920 C70602,534920 48768,531280 48768,526800 L48768,275590 C48768,271100 26934,267460 0.0000000000085129,267460 C26934,267460 48768,263820 48768,259330 L48768,8127.4 C48768,3638.8 70602,-0.000000000021282 97536,-0.000000000042564"/>
+						</defs>
+						<g mask="url(#mfid4)">
+							<g transform="matrix(0.00065617, 0, 0, 0.00065617, 3007, 1664)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<use xlink:href="#mfid27" fill="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 2739.7, 1872.3)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect y="-72" width="111" height="92" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 2850.7, 1872.3)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect y="-72" width="75" height="92" stroke="none"/>
+								</g>
+							</g>
+							<g transform="matrix(1, 0, 0, 1, 2925.7, 1872.3)">
+								<g fill="#ffff00" stroke-width="12700" stroke="#000000" stroke-miterlimit="8">
+									<rect y="-72" width="38" height="92" stroke="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2739.7, 1872.3)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,37,71,111" y="0" transform="translate(0,0)"
+												xml:space="preserve">Exp</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2850.7, 1872.3)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75" y="0" transform="translate(0,0)"
+												xml:space="preserve">全</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 2925.7, 1872.3)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,38" y="0" transform="translate(0,0)"
+												xml:space="preserve">1</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<defs>
+							<path id="mfid28" d="M2.6667,-13.333 L0,0 L-2.6667,-13.333 Z"/>
+						</defs>
+						<defs>
+							<path id="mfid29" d="M0,0 L290860,1"/>
+						</defs>
+						<g mask="url(#mfid4)">
+							<g transform="matrix(0.00065617, 0, 0, 0.00065617, 2562, 1850)">
+								<g fill="#000000">
+									<marker id="mfid30" markerUnits="strokeWidth" orient="align" overflow="visible">
+										<g transform="rotate(-45)" stroke-linecap="butt" stroke-miterlimit="10">
+											<use xlink:href="#mfid28" fill-rule="nonzero" stroke="none" fill="#000000"/>
+										</g>
+									</marker>
+								</g>
+								<g fill="#ffff00" stroke-width="9525" stroke="#000000" marker-end="url(#mfid30)"
+										stroke-miterlimit="8">
+									<use xlink:href="#mfid29" fill="none"/>
+								</g>
+							</g>
+						</g>
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3119.4, 1688.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,34,61,98,129" y="0" transform="translate(0,0)"
+												xml:space="preserve">Frac</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3248.4, 1688.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150" y="0" transform="translate(0,0)"
+												xml:space="preserve">全为</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3398.4, 1688.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,38" y="0" transform="translate(0,0)"
+												xml:space="preserve">0</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3436.4, 1688.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225,300,375,450" y="0"
+												transform="translate(0,0)" xml:space="preserve">，根据符号位</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3119.4, 1778.4)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225,300,375,450,525,600,675" y="0"
+												transform="translate(0,0)" xml:space="preserve">正负，表示正负无穷</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3132, 2036)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,34,61,98,129" y="0" transform="translate(0,0)"
+												xml:space="preserve">Frac</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3261, 2036)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225" y="0" transform="translate(0,0)"
+												xml:space="preserve">不是全</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3486, 2036)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,38" y="0" transform="translate(0,0)"
+												xml:space="preserve">0</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3524, 2036)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225" y="0" transform="translate(0,0)"
+												xml:space="preserve">，表示</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3132, 2126)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="75">
+										<text stroke="none" fill="#000000" x="0,49,86,135" y="0" transform="translate(0,0)"
+												xml:space="preserve">NaN</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 3267, 2126)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="75">
+										<text stroke="none" fill="#000000" x="0,75,150,225,300,375" y="0"
+												transform="translate(0,0)" xml:space="preserve">（非数字）</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 1845.7, 1071.2)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="100">
+										<text stroke="none" fill="#000000" x="0,27,76,125,174,197" y="0" transform="translate(0,0)"
+												xml:space="preserve">IEEE </text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 1855.7, 1191.2)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;Calibri&#39;,swiss,sans-serif" font-style="normal" font-weight="700"
+											font-size="100">
+										<text stroke="none" fill="#000000" x="0,51,102,153" y="0" transform="translate(0,0)"
+												xml:space="preserve">754</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 1832.7, 1310.2)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="100">
+										<text stroke="none" fill="#000000" x="0,100,200" y="0" transform="translate(0,0)"
+												xml:space="preserve">标准</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 1832.7, 1430.2)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="100">
+										<text stroke="none" fill="#000000" x="0,100,200" y="0" transform="translate(0,0)"
+												xml:space="preserve">浮点</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+						<!-- GetDC -->
+						<g mask="url(#mfid5)">
+							<g transform="matrix(1, 0, 0, 1, 1882.7, 1550.2)">
+								<g stroke="#000000" stroke-miterlimit="10" fill="none">
+									<g font-family="&#39;I縹&#39;" font-style="normal" font-weight="700" font-size="100">
+										<text stroke="none" fill="#000000" x="0,100" y="0" transform="translate(0,0)"
+												xml:space="preserve">数</text>
+									</g>
+								</g>
+							</g>
+						</g>
+						<!-- Released DC -->
+					</g>
+				</svg>
+			</switch>
+			<rect v:rectContext="foreign" x="0" y="0.499993" width="477.581" height="262.687" class="st1"/>
+		</g>
+	</g>
+</svg>

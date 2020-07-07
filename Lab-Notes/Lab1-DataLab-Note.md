@@ -2,13 +2,13 @@
 
 可以在本md中记录学习心得, 经验, 总结, 以及走过的坑!
 
-`Notes by Levick Cheng`
+`Notes by Levick Cheng` 网页阅读请安装[MathJax Plugin for Github](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima?hl=zh-CN)
 
 `Please read problems think thoroughly before you check this notes`
 
 [reference1](https://wdxtub.com/csapp/thick-csapp-lab-1/2016/04/16/)
 
-[reference2][https://zhuanlan.zhihu.com/p/59534845?utm_source=qq]
+[reference2](https://zhuanlan.zhihu.com/p/59534845?utm_source=qq)
 
 `Note:`请在纯linux环境中按照datalab.pdf的操作步骤运行（实测win、ras-pi ，make失败），并且请安装`gcc-multilib`，sudo apt-get install gcc-multilib, 即可。
 
@@ -320,4 +320,221 @@ int howManyBits(int x) {
     return b16+b8+b4+b2+b1+b0+1;//b0 is actually 0, 1 here is the sign bit.
 }
 ```
+## 11.floatScale2
 
+requirement:
+
+```c
+//float
+/* 
+ * floatScale2 - Return bit-level equivalent of expression 2*f for
+ *   floating point argument f.
+ *   Both the argument and result are passed as unsigned int's, but
+ *   they are to be interpreted as the bit-level representation of
+ *   single-precision floating point values.
+ *   When argument is NaN, return argument
+ *   Legal ops: Any integer/unsigned operations incl. ||, &&. also if, while
+ *   Max ops: 30
+ *   Rating: 4
+ */
+```
+
+简单释义：返回 输入浮点数f的两倍的（NaN时返回本身），输入与输出均为unsigned。
+
+简单回顾一下IEEE-754标准的浮点数
+
+<img src=".\img\IEEE754.svg" alt="IEEE754" style="zoom:150%;" />
+
+
+
+> 于是我们应该根据Exp分情况处理
+>
+> - 特殊值（Exp全1），正负无穷两倍还是无穷，NaN仍未NaN，所以直接返回uf即可
+> - 非规格化浮点数，左移一位或上符号位即可（由于连续性，不用担心范围）
+> - 规格化浮点数，exp+1即可（注意exp+1后的值与255比较，若相等返回相应无穷大）
+
+故参考答案如下：
+
+```c
+unsigned floatScale2(unsigned uf) {
+  int exp=(uf&0x7f800000)>>23;//obtain the value of E
+  int sign=uf&(1<<31);//if negative,0x10000000,else, 0x00000000
+  if(exp==255) return uf;
+  if(exp==0) return uf<<1|sign;
+  exp++;
+  if(exp==255) return 0x7f800000|sign;//return infinite
+  return (exp<<23)|(uf&0x807fffff);
+}
+```
+
+## 12 floatFloat2Int
+
+requirement:
+
+```c
+/* 
+ * floatFloat2Int - Return bit-level equivalent of expression (int) f
+ *   for floating point argument f.
+ *   Argument is passed as unsigned int, but
+ *   it is to be interpreted as the bit-level representation of a
+ *   single-precision floating point value.
+ *   Anything out of range (including NaN and infinity) should return
+ *   0x80000000u.
+ *   Legal ops: Any integer/unsigned operations incl. ||, &&. also if, while
+ *   Max ops: 30
+ *   Rating: 4
+ */
+```
+
+简言之就是将单精度浮点数转换为整数，且所有不在表示范围内的数都应该返回0x80000000。
+
+（uf是32位无符号整数，题目要求我们将其按照浮点数来解释并返回相应的整数值）
+
+题目其实就是考察我们对浮点数的理解，要将一串二进制数转换成整数真值。
+
+规格化浮点数时：$(-1)^s\times(2)^{E}\times1.M$
+
+非规格化浮点数时：$(-1)^s\times(2)^{E}\times M$,但是非规格化浮点数在小于1，就直接返回0了。
+
+同时，我们要考虑到单精度浮点数表示范围比int大，（int在-2\^31~2\^31-1之间），所以需要考虑过大和过小的舍入问题。
+
+参考答案如下：
+
+```c
+int floatFloat2Int(unsigned uf) {
+    int sign=uf>>31&1;
+    int frac=uf&0x007fffff;//get frac bits
+    int exp=(uf>>23)&0xff;//get exp bits
+    //now convert 
+    int E=exp-127;//single precision,bias is 127
+    //pay attention to the difference between E and frac
+    if(exp==255||E>30){
+	    return 0x80000000u;}//too large too represent(abs>2^31) 
+    else if(E<0||!exp){
+	    return 0;}//too small to represent(<1),cast to 0
+    //add 1 to the front to normalize
+    frac=frac|1<<23;
+    if(E>23){
+	    frac=frac<<(E-23);} 
+    else{
+	    frac=frac>>(23-E);}
+    if(sign){
+            return ~frac+1;}//original number was negative,negate.    
+    return frac;
+}
+```
+
+函数主要过程：首先得到sign，frac，exp和E，（注意阶码E和阶码位frac的区别）。
+
+然后我们根据exp和E来分情况讨论（最终我们通过frac移位运算来得到我们的结果）。
+
+> -  exp==255，全1，为特殊值（无穷或NaN）_或_E>30在int表示范围外，按题目要求返回0x80000000u
+>   - 特别的为什么是E>30而不是31呢，int绝对值小于`2^31`，在最小值取到。因为规格化浮点数M有默认的1，所以就算是表示最小值也只有在（0xcf000000）时可以表示，但正好返回	0x80000000u被解释为最小负数-2147483648。（自己可以调试一下理解过程，输入值为3472883712）。于是只要E>30即可，int最小值这一边界情况刚好覆盖。
+> - E<0或exp==0，E<1说明表示的为<1的数，exp全0说明是denorm，也小于1，返回0
+> -  规格化浮点数，正常进行移位运算。（注意在最前面加一以标准化）
+>   - 真值=$(-1)^s\times(2)^{E}\times1.M$
+>   - 为什么是23？frac有23位，我们直接解释的话已经将结果左移了23位，所以阶码E的值要减去23.
+> - 如果之前符号为负，取反。因为用frac储存答案，默认为正
+
+## 13. floatPower2
+
+requirement:
+
+```c
+/* 
+ * floatPower2 - Return bit-level equivalent of the expression 2.0^x
+ *   (2.0 raised to the power x) for any 32-bit integer x.
+ *
+ *   The unsigned value that is returned should have the identical bit
+ *   representation as the single-precision floating-point number 2.0^x.
+ *   If the result is too small to be represented as a denorm, return
+ *   0. If too large, return +INF.
+ * 
+ *   Legal ops: Any integer/unsigned operations incl. ||, &&. Also if, while 
+ *   Max ops: 30 
+ *   Rating: 4
+ */
+```
+
+这道题要求我们返回2的x次幂，超范围则返回正无穷，过小则返回0。
+
+相对来说十分简单，参考答案如下：
+
+```c
+unsigned floatPower2(int x) {
+    int INF=0xff<<23;//positive infinite
+    int exp=x+127;//x=E=exp-127
+    if(exp<0) return 0;//too small for fp number,cast to 0
+    if(exp>=255) return INF;    
+    return exp<<23;
+}
+```
+
+有同学可能会超时，可能是CPU性能不够，可以将btest文件里的时间限制double，或者make文件-m32换成-m64。
+
+## 测试代码
+
+直接在bits.c文件中不易调试，这里给出测试代码一个简单的模板。可以自己测试一下边界&特殊情况。
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int float_f2i(unsigned uf) {
+	int exp = (uf >> 23) & 0xFF;
+	int frac = uf & 0x007FFFFF;
+	int sign = uf & 0x80000000;
+	int bias = exp - 127;
+
+	if (exp == 255 || bias > 30) {
+		// exponent is 255 (NaN), or number is too large for an int
+		return 0x80000000u;
+	}
+	else if (!exp || bias < 0) {
+		// number is very small, round down to 0
+		return 0;
+	}
+
+	// append a 1 to the front to normalize
+	frac = frac | 1 << 23;
+
+	// float based on the bias
+	if (bias > 23) {
+		frac = frac << (bias - 23);
+	}
+	else {
+		frac = frac >> (23 - bias);
+	}
+
+	if (sign) {
+		// original number was negative, make the new number negative
+		frac = ~(frac)+1;
+	}
+
+	return frac;
+}
+int main()
+{
+	unsigned x;//if two variable then Datatype x,y;
+    //int x,y;
+    //usigned x,y;
+	while (true)
+	{
+		cin >> x;//if there is another variable, cin>>x>>y;
+		if (!cin) { break; }
+        //printf("%08x",function_name(variable1,variable2_If_exits));
+        //use 0x%08x to print the variable in hexadecimal and line up
+		int y = float_f2i(x);
+		printf("%d", y);
+		cout << endl;
+	}
+	return 0;
+}
+
+
+```
+
+![12345](.\img\12345.png)
+
+最后附上测试结果图，所有代码均通过测试。
