@@ -164,7 +164,13 @@ little endian order&big endian order [参考1][https://blog.csdn.net/waitingbb12
 
 ### Terminology
 
--: hyphen,连字符
+`-`: hyphen,连字符
+
+`!`: exclamation, 感叹号
+
+`assembler`: 汇编器
+
+`disassembler`: 反汇编器
 
 ### Normal
 
@@ -176,21 +182,19 @@ little endian order&big endian order [参考1][https://blog.csdn.net/waitingbb12
 
 > He used the word 'girl' in the pejorative sense when referring to the women who worked for him.
 
-goofy
+`goofy`：傻，愚笨的
 
-scratch the surface
+`scratch the surface`：只触及问题的表面
 
-sneaked in
+`ferocious `：猛烈的，残酷的
 
-13.47
+`patent suit`：专利诉讼
 
-ferocious 
+`counterpart`：相似的事物
 
-patent suit
+并没有任何特殊的意义。`It doesn't have any special significance to it.`
 
-miraculous
+我们下面会详细介绍它。`We'll go into more detail about it.`
 
-sheeplishly
-
-
+历史遗留物。`historical legacy stuff`
 
