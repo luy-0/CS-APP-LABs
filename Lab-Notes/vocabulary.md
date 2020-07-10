@@ -198,3 +198,28 @@ little endian order&big endian order [参考1][https://blog.csdn.net/waitingbb12
 
 历史遗留物。`historical legacy stuff`
 
+## L6 Machine Level Programming| control
+
+### Terminology
+
+`conditional code`：条件码
+
+`bit flag`：标志位
+
+`,`:comma，逗号
+
+`clock cycle`：时钟周期
+
+`instruction cycle`：指令周期
+
+###  Normal
+
+`slack off`: 偷懒，懈怠
+
+> Don't be fooled into thinking that you can slack off or work on other courses,and then the last few moments jump in and finish this lab.
+
+`That's just an aside.`： 这只是题外话。
+
+`analogy`：类比
+
+> This is my ocean line  and my tanker analogy. （The author made a metaphor right before that.）
